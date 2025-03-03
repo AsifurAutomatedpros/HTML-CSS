@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- head of the file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div>
+        <!-- svgimage -->
+        <svg>
+
+            <img src="Logo.svg" alt="logo">
+
+        </svg>
+    </div>
+    <!-- Registration Form -->
+    <div>
+        <h2>Fill this form to Register</h2>
+        <form action="signin.html" method="POST" enctype="multipart/form-data">
+            Name <input type="text" placeholder="Enter your Name" name="name" required minlength="1"
+                maxlength="1000"><br>
+            Email <input type="email" placeholder="Enter your Email" name="email"><br>
+            Phone Number <input type="number" placeholder="Enter your Phone Number" name="phoneNumber" required
+                minlength="10" maxlength="10"><br>
+            Password <input type="password" placeholder="Create Password" name="password" required minlength="4"
+                maxlength="8"><br>
+
+
+            <button type="submit" name="submit">SignUp</button>
+        </form>
+        <a href="signin.html" target="_blank"><button>Visit WSP signIn Page</button></a><br>
+    </div>
+    <div>
+        <!-- Video player on html -->
+        <video width="640" height="480" controls loop muted poster="ford.jpg">
+            <source src="video.mp4" type="video/mp4">
+
+        </video>
+        <!-- audio player -->
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+        <!-- YouTube video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BTyDQRil9s4?si=vzmVdSYtKFkYWYqK"
+            title="Learn Tailwind from YouTube" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
