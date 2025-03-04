@@ -1,4 +1,4 @@
-/* Define CSS variables for theme colors (Task 9) */
+
 :root {
     --primary-color: #007bff;
     --secondary-color: #28a745;
@@ -8,7 +8,7 @@
     --gradient-end: #4ecdc4;
   }
   
-  /* Reset default margins and ensure full viewport usage */
+  
   * {
     margin: 0;
     padding: 0;
@@ -16,64 +16,64 @@
   }
   
   body {
-    font-family: 'Lato', sans-serif; /* Task 5: Google Fonts */
-    font-size: 1rem; /* Base size for scalability with em/rem */
-    line-height: 1.6; /* Task 16: Improve readability */
+    font-family: 'Lato', sans-serif; 
+    font-size: 1rem; 
+    line-height: 1.6; 
     color: #333;
   }
   
-  /* Container with max-width for responsiveness */
+  
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 48px; /* Maintain your original margins but make it responsive */
+    padding: 0 48px; 
   }
   
-  /* Banner Section (Task 2: Background image, Task 4: Text alignment, Task 8: Gradient) */
+  
   .banner-text {
-    font-size: 3rem; /* Task 1: Different font sizes */
-    text-align: center; /* Task 4: Align text */
-    height: 200px; /* Fixed height to avoid overflow */
+    font-size: 3rem; 
+    text-align: center; 
+    height: 200px; 
     width: 100%;
-    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end)); /* Task 8: Gradient background */
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end)); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 50px;
-    color: white; /* Task 4: Change text color */
-    letter-spacing: 2px; /* Task 16: Letter spacing for readability */
+    color: white; 
+    letter-spacing: 2px; 
   }
   
-  /* Transparent Section (Task 13: Semi-transparent background, Task 14: Rounded corners) */
+  
   .transparent-section {
-    background-color: var(--transparent-blue); /* Task 13: Semi-transparent */
-    border-radius: 20px; /* Task 14: Rounded divs */
+    background-color: var(--transparent-blue); 
+    border-radius: 20px;
     padding: 20px;
     margin: 20px 0;
-    display: flex; /* Use flexbox for better layout */
-    gap: 20px; /* Space between thumbnail and text */
-    align-items: center; /* Center vertically */
+    display: flex;
+    gap: 20px; 
+    align-items: center; 
     width: 100%;
   }
   
-  /* Thumbnail styling */
+  
   .thumbnail img {
-    height: 200px; /* Reduced to prevent overflow */
+    height: 200px; 
     width: 200px;
-    object-fit: cover; /* Ensure image fits without distortion */
-    border-radius: 10px; /* Task 14: Rounded corners for image */
+    object-fit: cover; 
+    border-radius: 10px; 
   }
   
-  /* Paragraph styling (Task 1: Font styles, Task 4: Text alignment) */
+  
   .paragraph p {
-    font-size: 1.2rem; /* Task 1: Different font sizes */
-    color: #000; /* Task 4: Text color */
-    text-align: justify; /* Task 4: Align text */
-    line-height: 1.8; /* Task 16: Readability */
-    letter-spacing: 0.5px; /* Task 16: Letter spacing */
+    font-size: 1.2rem; 
+    color: #000; 
+    text-align: justify; 
+    line-height: 1.8;
+    letter-spacing: 0.5px; 
   }
   
-  /* Button Section (Task 3: Styled buttons, Task 12: Box-shadow, Task 14: Rounded buttons, Task 15: Transitions) */
+  
   .button-section {
     margin: 20px 0;
     display: flex;
@@ -82,15 +82,15 @@
   }
   
   .button1, .button2 {
-    background-color: var(--primary-color); /* Task 9: Use CSS variables */
+    background-color: var(--primary-color); 
     color: rgb(12, 1, 1);
     padding: 10px 20px;
     border: none;
-    border-radius: 15px; /* Task 14: Rounded buttons */
+    border-radius: 15px; 
     cursor: pointer;
     font-size: 1rem;
-    box-shadow: 0 4px 8px var(--shadow-color); /* Task 12: Box shadow */
-    transition: background-color 0.3s, transform 0.2s; /* Task 15: Transitions */
+    box-shadow: 0 4px 8px var(--shadow-color); 
+    transition: background-color 0.3s, transform 0.2s;
   }
   
   .button2 {
@@ -98,16 +98,15 @@
   }
   
   .button1:hover, .button2:hover {
-    background-color: darken(var(--primary-color), 10%); /* Darken on hover (simplified, use real logic or a darker hex) */
-    transform: scale(1.05); /* Task 15: Scale on hover */
+    background-color: darken(var(--primary-color), 10%); 
+    transform: scale(1.05);
   }
   
-  /* Task 17: Notification Badge with Bell Icon (Add this HTML and CSS if needed) */
-  /* HTML Example: <div class="notification"><span class="bell">🔔</span><span class="badge">5</span></div> */
+  
   .notification {
-    position: absolute; /* Positions relative to .container */
-    top: 20px; /* Distance from top of container */
-    right: 48px; /* Distance from right (matches container padding) */
+    position: absolute; 
+    top: 20px; 
+    right: 48px; 
     display: inline-block;
     z-index: 1000;
   }
@@ -123,50 +122,46 @@
     right: -10px;
     background-color: red;
     color: white;
-    border-radius: 50%; /* Task 14: Rounded badge */
+    border-radius: 50%;
     padding: 5px 10px;
     font-size: 0.8rem;
-    box-shadow: 0 2px 4px var(--shadow-color); /* Task 12: Shadow */
-    transition: transform 0.3s; /* Task 15: Transition */
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.3s; 
   }
   
   .badge:hover {
-    transform: scale(1.1); /* Task 15: Scale on hover */
+    transform: scale(1.1); 
   }
   
-  /* Task 18: Style Form Elements (Add this HTML and CSS if needed) */
-  /* HTML Example: <form><input type="text" class="form-input"><button class="form-button">Submit</button></form> */
+ 
   form {
     margin: 20px 0;
   }
   
   .form-input {
     padding: 10px;
-    border: 2px solid var(--primary-color); /* Task 18: Different border styles */
-    border-radius: 8px; /* Task 14: Rounded corners */
+    border: 2px solid var(--primary-color); 
+    border-radius: 8px; 
     font-size: 1rem;
-    transition: border-color 0.3s; /* Task 15: Transition */
+    transition: border-color 0.3s;
   }
   
-  .form-input:focus {
-    border-color: var(--secondary-color);
-    outline: none;
-  }
+
   
   .form-button {
     background-color: var(--secondary-color);
     color: rgb(15, 1, 1);
     padding: 10px 20px;
     border: none;
-    border-radius: 15px; /* Task 14: Rounded buttons */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Task 12: Shadow */
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px var(--shadow-color);
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Task 15: Transitions */
+    transition: background-color 0.3s, transform 0.2s; 
   }
   
   .form-button:hover {
     background-color: darken(var(--secondary-color), 10%);
-    transform: scale(1.05); /* Task 15: Scale on hover */
+    transform: scale(1.05); 
   }
   
   
