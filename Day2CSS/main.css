@@ -2,7 +2,7 @@
 :root {
     --primary-color: #007bff;
     --secondary-color: #28a745;
-    --transparent-blue: rgba(0, 0, 255, 0.5);
+    --transparent-blue: rgba(0, 0, 255, 0.3);
     --shadow-color: rgba(0, 0, 0, 0.2);
     --gradient-start: #ff6b6b;
     --gradient-end: #4ecdc4;
@@ -20,6 +20,8 @@
     font-size: 1rem; 
     line-height: 1.6; 
     color: #333;
+    
+    background-color: #81ee9b;
   }
   
   
@@ -164,4 +166,35 @@
     transform: scale(1.05); 
   }
   
-  
+  .border1{
+    border-style: solid;
+    margin-bottom: 8px;
+  }
+  .border2{
+    border-style: dotted;
+    margin-bottom: 8px;
+  }
+  .border3{
+    border-style: double;
+    margin-bottom: 8px;
+  }
+  .border4{
+    border-style: dashed;
+    margin-bottom: 8px;
+  }
+  .border5{
+    border-style: groove;
+    margin-bottom: 8px;
+  }
+  .border6{
+    border-style: ridge;
+    margin-bottom: 8px;
+  }
+  .border7{
+    border-style: inset;
+    margin-bottom: 8px;
+  }
+  .border8{
+    border-style: outset;
+    margin-bottom: 8px;
+  }
