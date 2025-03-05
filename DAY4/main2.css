@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    background-image: linear-gradient(to right, rgb(255, 239, 236), rgb(236, 236, 236));
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+
+.container {
+    max-width: 73%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.brand {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.brand-name {
+    margin-left: 8px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.time {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: end;
+    color: #333;
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+
+
+}
+
+.preparing {
+    flex-grow: 2;
+
+}
+
+.ready {
+    flex-grow: 1;
+
+}
+
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+
+.grid {
+    display: grid;
+    gap: 8px;
+
+}
+
+.preparing-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: 40px;
+}
+
+.ready-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: 40px;
+
+
+}
+
+.ready-grid button:first-child {
+    grid-column: 1 / 4;
+
+    grid-row: 1 / 3;
+    max-height: 80px;
+
+}
+
+
+
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ccc;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    max-height: 40px;
+    font-weight: 600;
+}
+
+.ready button {
+    background-color: #4CAF50;
+
+    color: white;
+}
+
+
+/* sticky header  */
+
+.mainHeader {
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 600;
+    max-width: 100%;
+    
+    gap: 20px;
+    
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+
+}
+.mainHeader span {
+    width: 30%;
+}
+.logo3 {
+    width: 90px;
+    height: 75px;
+    border-radius: 50%; 
+    background-color: #ebe3e3;
+    object-fit: none;
+    display: block;
+    margin: 0 auto;
+}
+.fullscreen {
+  
+    text-align: right;
+    font-size: 0.6em;
+   align-items: right;
+   justify-items: center;
+   width: 90%;
+   cursor: pointer;
+   
+
+}
+.btn {
+    border: solid 1px #ddd;
+    padding: 5px;
+    border-radius: 10px;
+}
+.logo2 {
+    max-height: 12px;
+    max-width: 12px;
+    margin-right: 5px;
+}
+.fullscreen img {
+    justify-items: center;
+}
+
+/*sticky sidebar*/
+
+.leftbar {
+    width: 64px; 
+    background-color: rgba(255, 255, 255, 0.0);
+    padding: 10px 0;
+    border-radius: 0 10px 10px 0; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.0);
+    position: fixed; 
+    top: 65px; 
+    
+    height: calc(100vh - 65px); /* Full viewport height minus header */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 900; /* Below header but above content */
+    justify-content: center;
+    align-content: center;
+    
+}
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5px; 
+    border: solid 1px #ddd;
+    justify-items: center;
+    border-radius: 36px;
+    background-color: black;
+}
+
+.each-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    background-color: #333;
+    object-fit: none;
+    display: block;
+    margin: 0 auto; 
+}
+
+/* Profile Icon Section */
+.profile-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5px;
+    width: 64px;
+    position: fixed;
+    bottom: 50px;
+    border: solid 1px #ddd;
+    justify-items: center;
+    border-radius: 36px;
+    background-color: white;
+}
+
+.p-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    background-color: #ebe3e3;
+    object-fit: none;
+    display: block;
+    margin: 0 auto; 
+}
+
+
+
+
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr 1fr;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .brand {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .time {
+        text-align: right;
+        margin-top: 10px;
+        align-items: center;
+        font-size: 16px;
+
+    }
+
+    .content {
+        flex-direction: column;
+
+    }
+
+    .section {
+        max-width: 100%;
+
+    }
+
+    .preparing-grid {
+        grid-template-columns: repeat(6, 1fr);
+
+        grid-template-rows: auto;
+    }
+
+    .ready-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-rows: auto;
+    }
+
+    button {
+        font-size: 0.7em;
+       font-weight: 600;
+        padding: 5px;
+    }
+}
+
+
+button {
+    aspect-ratio: 1;
+
+    min-width: 0;
+
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
