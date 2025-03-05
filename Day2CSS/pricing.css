@@ -1,12 +1,132 @@
 @font-face {
     font-family: 'Metropolis';
-    src: url('metropolis/Metropolis-Regular.otf') format('opentype');
+    src: url('metropolis/Metropolis-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
   }
-
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-ExtraBoldItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    src: url('metropolis/Metropolis-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+  }
 body {
     font-family: Metropolis, sans-serif;
     line-height: 1.6;
-    color: #333;
+   
 }
 
 /* Header */
@@ -38,16 +158,24 @@ nav a {
 }
 
 /* Main Content - Pricing Header */
+.sub{
+    font-weight: 400;
+    line-height: 1.65em;
+    color: #3F3F3F;
+    font-size: 18px;
+}
 .pricing-header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f9f9f9;
+    
 }
 
 .pricing-header h2 {
-    font-size: 50px;
+    font-size: 70px;
     color: #333;
     margin-bottom: 10px;
+    font-weight: 800;
+    line-height: 65px;
 }
 .pricing-header h2 b {
     font-size: 50px;
@@ -55,10 +183,7 @@ nav a {
     margin-bottom: 10px;
 }
 
-.pricing-header p {
-    font-size: 16px;
-    color: #666;
-}
+
 
 /* Pricing Plans */
 .pricing-plans {
@@ -66,8 +191,8 @@ nav a {
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 0 10px;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .price-icon {
@@ -79,27 +204,32 @@ nav a {
 
 .plan {
     background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    width: 300px;
+    border: 1px solid #EDEDED;
+    border-radius: 24px;
+    padding: 30px;
+    width: 43%;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-right: 30px;
+    box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
+    
 }
 
 .plan h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 18px;
+    color: #656565;;
+    margin-bottom: 0px;
+    line-height: 1em;
+    font-weight: 800;
+    margin-left: 5px;
 }
 
 .plan .price {
-    font-size: 24px;
-    color: #ff4d4d;
-    margin: 10px 0;
+    font-size: 28px;
+    color: #121212;
+    margin:  0px;
     display: inline-flex; 
     align-items: center;
+    font-weight: 800;
+    
 }
  i {
     color: #ff4d4d;
@@ -109,55 +239,111 @@ nav a {
 .bottom-2ndprice2{
     margin: 0px;
     padding: 0px;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 30px;
+    color: #121212;
+    font-weight: 400;
+    font-size: 18px;
+}
+.bottom-2ndprice {
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #121212;;
 }
 .heading {
-    font-size: 14px;
+    font-size: 18px;
+    color: #121212;
     font-weight: 800;
+    line-height: 20px;
+    margin-bottom: 4px;
+    text-align: left;
+    margin-left: 9px;
 }
 .heading2 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 800;
     color: #ff4d4d;
+    line-height: 20px;
+    margin-bottom: 4px;
+    text-align: left;
+    margin-left: 9px;
 }
 
 
-.plan p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-}
 
 .plan button {
-    background-color: #ff4d4d;
+    background-color: #FF5634;;
     color: white;
     border: none;
     padding: 18px 65px;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    height: 70px;
+    width: 283px;
 }
 
 .plan button:hover {
     background-color: #e63f3f;
 }
+.short{
+    font-weight: 400;
+    line-height: 1.65em;
+    color: #656565;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 .plan h4 {
-    font-size: 18px;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 900;
     color: #333;
-    margin: 20px 0 10px;
+    margin: 20px 0 20px;
 }
 
 .plan ul {
     list-style-type: none;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .plan li {
-    font-size: 14px;
+    font-size: 18px;
     color: #666;
-    margin-bottom: 5px;
+    margin-bottom: 24px;
+    line-height: 20px;
+}
+.im {
+    max-width: 20px;
+    max-height: 20px;
+    vertical-align: middle;
+}
+.batch{
+    max-width: 160px;
+    max-height: 160px;
+    z-index: 30;
+    position: absolute;
+    margin-top: -75px;
+    margin-left: -72px;
+}
+.article {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 0;
+    text-align: left;
+    font-style: italic;
+    margin-left: 30px;
+    color: #121212;;
 }
 
 /* Call to Action */
