@@ -118,20 +118,54 @@
     color: #333;
   }
   
-  .badge {
+  .notification-badge {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: red;
+    
     color: white;
     border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 0.8rem;
+   
     box-shadow: 0 2px 4px var(--shadow-color);
     transition: transform 0.3s; 
+    display: inline-flex; /* Use flex for centering text */
+    justify-content: center;
+    align-items: center;
+    width: 32px; /* Base width for single digit */
+    height: 32px; /* Base height for single digit */
+    background-color: red; /* Red background, matching the image */
+    
+    font-size: 12px; /* Small font for 1 digit, scales for more digits */
+    font-weight: bold; /* Bold text for visibility */
+    border-radius: 50%; /* Circular shape */
+    margin-left: 5px; /* Space from the text/icon, adjust as needed */
+    z-index: 950; /* Above other elements but below header/sidebar */
   }
+  /* Adjust size for multi-digit numbers (e.g., 2 or 3 digits) */
+.notification-badge[data-count="2"] {
+  width: 32px; /* Slightly larger for 2 digits (e.g., "12") */
+  height: 32px;
+  font-size: 10px; /* Slightly larger font */
+}
+
+.notification-badge[data-count="3"] {
+  width: 32px; /* Larger for 3 digits (e.g., "123") */
+  height: 32px;
+  font-size: 8px; /* Larger font to fit 3 digits */
+}
+
+/* Ensure text fits and stays centered */
+.notification-badge {
+  min-width: 10px; /* Minimum width to maintain circular shape */
+  min-height: 10px;
+  overflow: hidden; /* Prevent text overflow */
+  text-align: center;
+  line-height: 1; /* Tighten line height for better fit */
+}
+
+
   
-  .badge:hover {
+  .notification-badge:hover {
     transform: scale(1.1); 
   }
   
