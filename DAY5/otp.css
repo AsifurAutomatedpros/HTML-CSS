@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+.main-container {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+    
+}
+
+.table-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr; 
+    gap: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    grid-template-rows: auto;
+    height: 93%; 
+}
+
+.parent-imgsec {
+    background-image: url('Introduction.png'); /* Middle layer */
+    background-size: cover;
+    
+    position: relative;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: #ff5524; /* Fallback color */
+}
+
+.parent-imgsec::before {
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 86, 52, 0.5); /* Orange overlay (top layer) */
+    z-index: 1; /* Above image and gradient, below content */
+}
+
+.left-side {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+    width: 180px;
+}
+
+.text-title {
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 90%;
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 1);
+}
+
+.parent-form {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 40px;
+    align-content: center;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.right-side h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* OTP styles */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.otp-input {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #080808;
+    outline: none;
+    color: #f1f0f0;
+}
+
+.otp-input:valid, .otp-input:not(:placeholder-shown) {
+    background-color: #fffafa; /* Filled background color */
+    color: rgb(12, 11, 11); /* White text for filled input */
+}
+
+.otp-input:focus {
+    border-color: #1A1A1A;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.form-options a {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+.right-side button {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.4);
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.right-side button:hover {
+    background-color: #f7f2f2;
+}

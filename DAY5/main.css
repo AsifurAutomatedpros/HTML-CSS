@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-container {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+}
+
+.table-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    /* 33.33% and 66.67% */
+    gap: 0;
+    border-radius: 30px;
+    overflow: hidden;
+
+    grid-template-rows: auto;
+    height: 93%;
+}
+
+.parent-imgsec {
+    background-image: url('Introduction.png'); /* Middle layer */
+    background-size: cover;
+    
+    position: relative;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: #ff5524; /* Fallback color */
+}
+
+.parent-imgsec::before {
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 86, 52, 0.5); /* Orange overlay (top layer) */
+    z-index: 1; /* Above image and gradient, below content */
+}
+
+
+.left-side {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+   
+    color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+    width: 180px;
+    
+}
+
+.text-title {
+    font-size: 60px;
+    font-weight: 700;
+   
+    margin-top: 90%;
+   
+
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 1);
+
+}
+
+.parent-form {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 40px;
+    align-content: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.right-side h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.right-side label {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 700;
+}
+
+.right-side input[type="email"],
+.right-side input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: #F9F9F9;
+    margin-bottom: 15px;
+    margin-top: -11px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 25%;
+    transform: translateY(-50%);
+
+    color: #666;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+}
+
+.form-options a {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+.Remember {
+    color: rgba(0, 0, 0, 1);
+}
+
+.right-side input[type="checkbox"] {
+
+    border-radius: 8px;
+    border: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+.right-side button {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.right-side button:hover {
+    background-color: #333;
+}
