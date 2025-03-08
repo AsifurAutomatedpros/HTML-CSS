@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+    .custom-shadow {
+        box-shadow: -6px 0 1px rgba(248, 22, 22, 0.3);
+      }
+
+      .shadow1{
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+      }
+
+
+
+      .shadow2{
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4); 
+      }
