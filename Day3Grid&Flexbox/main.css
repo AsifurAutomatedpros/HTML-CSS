@@ -287,3 +287,33 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     cursor: pointer; 
 }
+
+
+/* Responsive CSS for Mobile */
+
+@media (max-width: 768px) {
+    .grid-parent {
+        padding: 10px; 
+        width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; 
+    }
+
+    .item-card {
+        height: auto; 
+        padding: 15px; 
+    }
+
+    .item-card h2 {
+        font-size: 16px; 
+    }
+
+    .item-card p {
+        font-size: 14px; 
+        position: static; 
+        margin-top: 10px; 
+    }
+}

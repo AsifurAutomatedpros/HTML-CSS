@@ -353,41 +353,41 @@ button {
     }
 
     .wrapper {
-        flex-direction: column; /* Stack sidebar and content vertically */
+        flex-direction: column; 
     }
 
     .leftbar {
-        position: static; /* Remove fixed positioning */
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Auto height */
-        flex-direction: row; /* Horizontal layout */
+        position: static; 
+        width: 100%; 
+        height: auto; 
+        flex-direction: row; 
         justify-content: space-between;
         padding: 10px;
         border-radius: 10px;
-        background-color: #fff; /* Optional: to match other sections */
+        background-color: #fff; 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px; /* Space below sidebar */
+        margin-bottom: 20px;
         margin-top: 10px;
     }
 
     .icons {
-        flex-direction: row; /* Icons horizontal */
+        flex-direction: row; 
         width: auto;
-        background-color: transparent; /* Remove black background */
-        border: none; /* Remove border */
+        background-color: transparent; 
+        border: none; 
         padding: 0;
     }
 
     .profile-icon {
-        flex-direction: row; /* Profile icons horizontal */
-        position: static; /* Remove fixed positioning */
+        flex-direction: row; 
+        position: static; 
         width: auto;
-        border: none; /* Remove border */
+        border: none;
         padding: 0;
     }
 
     .each-icon, .p-icon {
-        width: 30px; /* Smaller icons on mobile */
+        width: 30px;
         height: 30px;
     }
 
@@ -414,12 +414,10 @@ button {
     }
 
     .preparing-grid {
-        grid-template-columns: repeat(3, 1fr); /* Fewer columns on mobile */
+        grid-template-columns: repeat(3, 1fr); 
     }
 
-    .ready-grid {
-        grid-template-columns: repeat(2, 1fr); /* Fewer columns on mobile */
-    }
+   
 
     button {
         font-size: 0.7em;
