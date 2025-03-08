@@ -206,3 +206,164 @@ body {
 .right-side button:hover {
     background-color: #333;
 }
+.logo2{
+    display: none;
+}
+.panel{
+    display: none;
+}
+
+
+/* Responsive css changes */
+
+/* Media Query for Tablets and Mobile Portrait (max-width: 768px) */
+@media (max-width: 1024px) {
+    .main-container {
+        max-width: 100vw;
+        padding: 100px;
+        background: linear-gradient(33.85deg, #FDE8E4 37.88%, #ECECEC 73.61%);
+        height: 100vh;
+         /* Allow height to adjust based on content */
+    }
+
+    .table-container {
+        height: auto; /* Allow height to adjust */
+    }
+
+    .table-row {
+        grid-template-columns: 1fr; /* Stack vertically */
+        grid-template-rows: auto auto; /* Two rows for image and form */
+        height: auto; /* Allow height to adjust */
+        border-radius: 20px; /* Slightly smaller radius for smaller screens */
+        justify-items: center; /* Add this line to center horizontally */
+        align-items: center; /* Add this line to center vertically */   
+    
+    }
+
+    .parent-imgsec {
+        padding: 20px;
+        border-radius: 20px 20px 0 0; /* Rounded top corners only */
+        height: 300px; /* Fixed height for the image section */
+        background-size: cover;
+        background-position: center;
+        display: none;
+    }
+
+    .parent-imgsec::before {
+        border-radius: 20px 20px 0 0; /* Match the parent's border radius */
+        display: none;
+    }
+
+    .left-side {
+        align-items: center; /* Center content */
+        text-align: center;
+    }
+
+    .logo {
+        width: 120px; /* Smaller logo for mobile */
+    }
+    .logo2 {
+        display: flex ;
+        width: 120px; /* Smaller logo for mobile */
+        align-items: center;
+        gap: 2px;
+        text-align: center;
+        flex-wrap: nowrap;
+        position: absolute; /* Add this line */
+        left: 47%; /* Add this line */
+        transform: translateX(-50%); 
+        grid-template-columns: 1fr;
+       /* left: 45%;
+        transform: translateX(-50%); */
+    }
+    .logo2 img{
+        display:block;
+        
+    }
+    .panel {
+        display: block;
+        font-size: 18px;
+        color: #1A1A1A;
+        font-weight: 600;
+        position: absolute; /* Add this line */
+        left: 50%; /* Add this line */
+        transform: translateX(-50%); 
+        grid-template-columns: 1fr;
+        margin-top: 72px;
+    }
+
+    .text-title {
+        font-size: 36px; /* Smaller font size */
+        margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .text {
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    .parent-form {
+        padding: 20px;
+        border-radius: 0 0 20px 20px; /* Rounded bottom corners only */
+        /* margin-top: 13vh; */
+        background: linear-gradient(33.85deg, #FDE8E4 37.88%, #ECECEC 73.61%);
+        /* left: 45%; */
+        position: absolute; /* Add this line */
+        top: 50%; /* Add this line */
+        transform: translateY(-50%);
+        width: 55%;
+    }
+
+    .right-side {
+        max-width: 100%; /* Full width for form */
+        padding: 0 10px; /* Add some padding */
+    }
+
+    .right-side h3 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .subtitle {
+        font-size: 14px; /* Smaller subtitle */
+    }
+
+    .right-side input[type="email"],
+    .right-side input[type="password"] {
+        padding: 10px 12px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .right-side button {
+        padding: 10px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}
+
+/* Media Query for Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .main-container {
+        max-width: 100vw;
+        padding: 20px;
+        background: linear-gradient(33.85deg, #FDE8E4 37.88%, #ECECEC 73.61%);
+    }
+
+    .parent-imgsec {
+        height: 250px; /* Even smaller height for very small screens */
+        display: none;
+    }
+
+    .parent-form {
+        width: 90%;
+
+    }
+    .logo2{
+        left: 43%;
+    }
+
+    .right-side h3 {
+        font-size: 1.3rem; /* Even smaller heading */
+    }
+
+    .subtitle {
+        font-size: 12px; /* Even smaller subtitle */
+    }
+}
