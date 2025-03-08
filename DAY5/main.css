@@ -282,7 +282,7 @@ body {
     }
     .panel {
         display: block;
-        font-size: 18px;
+        font-size: 32px;
         color: #1A1A1A;
         font-weight: 600;
         position: absolute; /* Add this line */
@@ -365,5 +365,8 @@ body {
 
     .subtitle {
         font-size: 12px; /* Even smaller subtitle */
+    }
+    .panel {
+        font-size: 18px;
     }
 }
