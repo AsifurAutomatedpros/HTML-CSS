@@ -341,3 +341,98 @@ button {
     justify-content: center;
 
 }
+
+
+/* Responsive design */
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .wrapper {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .leftbar {
+        position: static; /* Remove fixed positioning */
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height */
+        flex-direction: row; /* Horizontal layout */
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #fff; /* Optional: to match other sections */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Space below sidebar */
+        margin-top: 10px;
+    }
+
+    .icons {
+        flex-direction: row; /* Icons horizontal */
+        width: auto;
+        background-color: transparent; /* Remove black background */
+        border: none; /* Remove border */
+        padding: 0;
+    }
+
+    .profile-icon {
+        flex-direction: row; /* Profile icons horizontal */
+        position: static; /* Remove fixed positioning */
+        width: auto;
+        border: none; /* Remove border */
+        padding: 0;
+    }
+
+    .each-icon, .p-icon {
+        width: 30px; /* Smaller icons on mobile */
+        height: 30px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .header {
+        grid-template-columns: 1fr 1fr;
+        font-size: 16px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .time {
+        text-align: right;
+        font-size: 16px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .preparing-grid {
+        grid-template-columns: repeat(3, 1fr); /* Fewer columns on mobile */
+    }
+
+    .ready-grid {
+        grid-template-columns: repeat(2, 1fr); /* Fewer columns on mobile */
+    }
+
+    button {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+    .mainHeader{
+        font-size: 1em;
+    }
+    .logo3{
+        height: auto;
+        width: auto;
+    }
+    .mainHeader span {
+        width: 60%;
+    }
+}
