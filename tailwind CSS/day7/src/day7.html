@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-[Lato] bg-gradient-to-r from-[#FFEFE4] to-[#ECECEC] leading-relaxed max-w-full">
+    <div class="container sm:h-[100vh] lg:max-w-[73%] sm:mx-auto lg:p-[20px] sm:p-[10px] sm:max-w-[100%]">
+        <header class="mainHeader flex md:text-[1.5em] sm:text-[1em] font-semibold max-w-[100vw] gap-[20px] flex-row flex-nowrap items-center sticky top-0 z-[1000] p-2">
+            <img class="logo3 md:w-[90px] md:h-[75px] sm:h-auto sm:w-auto rounded-full md:bg-[#ebe3e3] sm:bg-none object-none mx-auto block" src="Logo.svg" alt="OrderificLogo">
+            <span class="w-[50%]">Order Status</span>
+            <div class="fullscreen text-right text-[0.6em] w-[90%] cursor-pointer">
+                <span class="btn border border-[#ddd] p-[5px] rounded-[10px] inline-flex items-center">
+                    <img class="logo2 max-h-3 max-w-3 mr-[5px]" src="fullscreen.png">FullScreen
+                </span>
+            </div>
+        </header>
+        <div class="wrapper p-2">
+            <aside class="leftbar lg:w-[64px]  sm:w-[100%]  lg:bg-[rgba(255,255,255,0.0)]  sm:bg-white md:pt-[10px] md:pb-[10px]   lg:rounded-r-[10px] sm:rounded-r-[4px] shadow-[2px_0_5px_rgba(0,0,0,0.0)] lg:fixed sm:static lg:top-[65px] lg:h-[calc(100vh-65px)]  flex lg:flex-col sm:flex-row   z-[900] justify-center content-center  ">
+                <div class="icons flex lg:flex-col sm:flex-row gap-[10px] p-[10px_5px] lg:border lg:border-[#ddd] sm:static sm:border-none rounded-[36px] lg:bg-black md:bg-[rgba(255,255,255,0.0)]">
+                    <img class="each-icon md:w-10 md:h-10  rounded-full bg-[#333] object-none mx-auto block" src="Vector.png" alt="icon">
+                    <img class="each-icon md:w-10 md:h-10  rounded-full bg-[#333] object-none mx-auto block" src="Vector (1).png" alt="icon">
+                    <img class="each-icon md:w-10 md:h-10  rounded-full bg-[#333] object-none mx-auto block" src="Vector (2).png" alt="icon">
+                    <img class="each-icon md:w-10 md:h-10  rounded-full bg-[#333] object-none mx-auto block" src="Vector (3).png" alt="icon">
+                    <img class="each-icon md:w-10 md:h-10  rounded-full bg-[#333] object-none mx-auto block" src="Vector (4).png" alt="icon">
+                    <img class="each-icon md:w-10 md:h-10  rounded-full bg-[#333] object-none mx-auto block" src="Vector (5).png" alt="icon">
+                </div>
+                <div class="profile-icon flex lg:flex-col sm:flex-row gap-[10px] p-[10px_5px] lg:w-[64px] md:w-auto lg:fixed sm:static bottom-[50px] lg:border lg:border-[#ddd] sm:border-none rounded-[36px] bg-white">
+                    <img class="p-icon md:w-10 md:h-10  rounded-full bg-[#ebe3e3] object-none mx-auto block" src="S.png" alt="profile-icon">
+                    <img class="p-icon md:w-10 md:h-10  rounded-full bg-[#ebe3e3] object-none mx-auto block" src="Vector7.png" alt="notification-icon">
+                </div>
+            </aside>
+            <div class="main-content lg:max-w-[1300px] sm:max-w-[90%] sm:mx-auto  lg:p-[20px] sm:p-[10px] lg:w-[85%] sm:w-[100%] sm:p-2 ">
+                <header class="header flex justify-between items-center  mb-[20px] bg-[rgba(255,255,255,0.1)] p-[10px] rounded-[10px] shadow-[0_2px_5px_rgba(0,0,0,0.1)]">
+    <div class="brand flex flex-wrap gap-[5px] items-center md:text-[18px] sm:text-[16px] font-semibold">
+        <img src="macdonald.png" alt="McDonald's Logo" class="logo w-[50px] h-auto">
+        <span class="brand-name ml-[8px]">MacDonald's</span>
+    </div>
+    <span class="time lg:text-[1.2em] sm:text-[1em] font-semibold text-right text-[#333]">15:03</span>
+</header>
+                <div class="content md:flex sm:block md:flex-wrap sm:flex-wrap-none  md:flex-row sm:flex-col gap-[20px] sm:justify-between">
+                    <div class="section preparing md:flex-[2] sm:w-full mb-[10px] bg-white p-[20px] rounded-[10px] shadow-[0_2px_5px_rgba(0,0,0,0.1)]">
+                        <h2 class="text-[1.5em] mb-[15px] text-[#333] text-center font-[600]">Preparing</h2>
+                        <div class="grid preparing-grid grid-cols-6 gap-[8px] auto-rows-[40px]">
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#ccc] min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                        </div>
+                    </div>
+                    <div class="section ready md:flex-[1] sm:w-full bg-white p-[20px] rounded-[10px] shadow-[0_2px_5px_rgba(0,0,0,0.1)]">
+                        <h2 class="text-[1.5em] mb-[15px] text-[#333] text-center font-[600]">Ready</h2>
+                        <div class="grid ready-grid grid-cols-3 gap-[8px] auto-rows-[40px]">
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[80px] font-semibold aspect-[1] w-full h-full flex items-center justify-center col-span-3 row-span-2">3885</button>
+                            
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                            <button class="p-[10px] text-[1em] border-none rounded-[8px] cursor-pointer bg-[#4CAF50] text-white min-w-0 max-h-[40px] font-semibold aspect-[1] w-full h-full flex items-center justify-center">3885</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

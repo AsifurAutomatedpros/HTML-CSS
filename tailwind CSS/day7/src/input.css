@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+
+@media (max-width: 639px) {
+  .leftbar {
+    position: static; 
+    width: 100%; 
+    height: auto; 
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.each-icon {
+
+width:30px;
+height: 30px;
+}
+
+ .p-icon{
+  width:30px;
+height: 30px;
+ }
+ button {
+  font-size: 0.7em;
+  padding: 5px;
+}
+}

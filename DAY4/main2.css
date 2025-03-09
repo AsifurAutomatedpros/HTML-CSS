@@ -107,7 +107,7 @@ body {
 
 .preparing-grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
+    
     grid-auto-rows: 40px;
 }
 
@@ -278,74 +278,49 @@ button {
 
 
 
-@media (max-width: 768px) {
-    .header {
-        grid-template-columns: 1fr 1fr;
-        font-size: 16px;
-        text-align: center;
-    }
 
-    .brand {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .time {
-        text-align: right;
-        margin-top: 10px;
-        align-items: center;
-        font-size: 16px;
-
-    }
-
-    .content {
-        flex-direction: column;
-
-    }
-
-    .section {
-        max-width: 100%;
-
-    }
-
-    .preparing-grid {
-        grid-template-columns: repeat(6, 1fr);
-
-        grid-template-rows: auto;
-    }
-
-    .ready-grid {
-        grid-template-columns: repeat(3, 1fr);
-
-        grid-template-rows: auto;
-    }
-
-    button {
-        font-size: 0.7em;
-       font-weight: 600;
-        padding: 5px;
-    }
-}
-
-
-button {
-    aspect-ratio: 1;
-
-    min-width: 0;
-
-
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
 
 
 /* Responsive design */
 
 /* Media Queries for Mobile */
+
+@media (max-width: 1400px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    .leftbar {
+        position: static; 
+        width: 100%; 
+        height: auto; 
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #fff; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .icons {
+        flex-direction: row; 
+        width: auto;
+        background-color: transparent; 
+        border: none; 
+        padding: 0;
+    }
+
+    .profile-icon {
+        flex-direction: row; 
+        position: static; 
+        width: auto;
+        border: none;
+        padding: 0;
+    }
+
+
+}
 @media (max-width: 768px) {
     .container {
         padding: 10px;
