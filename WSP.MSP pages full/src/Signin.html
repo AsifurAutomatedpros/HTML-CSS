@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensure output.css exists and is correctly generated from Tailwind config -->
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Fallback CSS if output.css is not working */
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe3e6 100%);
+        }
+
+        .wrong-code {
+            background-color: #e0e0e0;
+            border: 2px solid #ef4444;
+            color: #ef4444;
+        }
+
+        /* Style for empty field warnings */
+        #email-empty-warning,
+        #password-empty-warning {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="font-['DM_Sans'] bg-gradient-custom min-h-screen flex items-center justify-center">
+    <div class="max-w-[99vw] md:max-w-[90vw] lg:max-w-[70vw] mx-auto p-5 min-h-screen flex flex-col justify-center md:p-20 lg:p-5 ">
+        <!-- Logo and Title for Mobile -->
+        <div
+            class="lg:hidden flex items-center justify-center gap-2 absolute top-5 left-1/2 transform -translate-x-1/2">
+            <img src="img/signin/Logo (1).png" alt="logo2" class="w-8">
+            <img src="img/signin/Brand.png" alt="brand" class="w-20">
+        </div>
+        <b
+            class="lg:hidden mb-2 block text-2xl md:text-3xl font-semibold text-center text-[#1A1A1A] absolute top-20 left-1/2 transform -translate-x-1/2">Service
+            Panel</b>
+
+        <!-- Main Grid -->
+        <div
+            class="grid grid-cols-1 lg:grid-cols-[1.1fr_1.9fr] gap-0 rounded-3xl overflow-hidden h-[93vh] lg:h-[80vh] lg:bg-transparent">
+            <!-- Left Side Image Section -->
+            <div
+                class="hidden lg:block relative p-10 rounded-3xl bg-[#FF5524] bg-[url('img/signin/Introduction.png')] bg-cover">
+                <div class="absolute inset-0 bg-[#FF5624]/50 rounded-3xl z-10"></div>
+                <div class="relative z-20 flex flex-col text-white h-full">
+                    <img src="img/signin/Logo.png" alt="logo" class="w-44">
+                    <div class="mt-auto pb-5">
+                        <h2 class="text-5xl font-bold">Service Panel</h2>
+                        <p class="text-base leading-relaxed">Streamline your restaurant operations with BMS. Manage
+                            reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional
+                            dining experiences.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Form Section -->
+            <div class="flex items-center justify-center p-5 lg:p-10 lg:rounded-r-3xl ">
+                <div class="w-full max-w-md space-y-6 overflow-hidden">
+                    <!-- SignIn Form -->
+                    <div id="signin-form" class="space-y-6">
+                        <div class="text-center">
+
+                            <h3 class="text-2xl md:text-3xl font-bold text-[#1A1A1A] ">Welcome Back</h3>
+                            <p class="text-sm md:text-base text-gray-600 mt-2">Manage, streamline, and thrive effortlessly.
+                            </p>
+                        </div>
+                        <form action="#" method="post" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">Email</label>
+                                <input type="email" placeholder="Enter your Email" required
+                                    class="w-full p-3 border border-gray-200 rounded-full bg-gray-50 text-sm focus:outline-none focus:border-[#1A1A1A]"
+                                    id="email-input">
+                                <div id="email-empty-warning"
+                                    class="text-sm text-[#1A1A1A] bg-yellow-100 border border-yellow-400 rounded-md p-2 mt-1 flex items-center gap-1 hidden">
+                                    <span class="text-yellow-600">!</span> Please fill out this field.
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">Password</label>
+                                <div class="relative">
+                                    <input type="password" placeholder="••••••••" required
+                                        class="w-full p-3 border border-gray-200 rounded-full bg-gray-50 text-sm focus:outline-none focus:border-[#1A1A1A]"
+                                        id="password-input">
+                                    <img src="img/signin/Vector.png" alt="eye-icon"
+                                        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 cursor-pointer">
+                                </div>
+                                <div id="password-empty-warning"
+                                    class="text-sm text-[#1A1A1A] bg-yellow-100 border border-yellow-400 rounded-md p-2 mt-1 flex items-center gap-1 hidden">
+                                    <span class="text-yellow-600">!</span> Please fill out this field.
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <label class="flex items-center gap-2 text-black">
+                                    <input id="remember-me" type="checkbox" class="w-4 h-4 rounded bg-gray-200 border border-gray-400 appearance-none relative checked:bg-gray-200 checked:border-gray-400" > Remember me
+                                </label>
+                                <a href="#" id="toggle-otp" class="text-black hover:underline">Login with Code</a>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-[#1A1A1A] text-white p-3 rounded-full font-medium hover:bg-[#333] transition cursor-pointer">Sign
+                                In</button>
+                            <div id="email-warning"
+                                class="text-center text-red-500 flex justify-center items-center text-sm hidden">
+                                <img src="img/signin/Vector2.png" alt="logo" class="w-4 h-4 mr-2">
+                                Email or password is incorrect.
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- OTP Form (Hidden by Default) -->
+                    <div id="otp-form" class="space-y-6 hidden">
+                        <div class="text-center">
+
+                            <h3 class="text-2xl md:text-3xl font-bold text-[#1A1A1A]">Welcome Back</h3>
+                            <p class="text-sm md:text-base text-gray-600">Manage, streamline, and thrive
+                                effortlessly.<br>Enter 6 digit pin</p>
+                        </div>
+                        <form action="#" method="post" class="space-y-4">
+                            <div class="flex justify-center gap-2 mb-5">
+                                <input type="text" maxlength="1" required
+                                    class="w-10 h-10 border border-gray-200 rounded-full text-center text-lg font-bold   bg-white  focus:outline-none focus:border-[#1A1A1A] focus:shadow-md"
+                                    oninput="this.classList.add('bg-black', 'text-white'); this.nextElementSibling.focus();">
+                                <input type="text" maxlength="1" required
+                                    class="w-10 h-10 border border-gray-200 rounded-full text-center text-lg font-bold bg-white focus:outline-none focus:border-[#1A1A1A] focus:shadow-md"
+                                    oninput="this.classList.add('bg-black', 'text-white'); this.nextElementSibling.focus();">
+                                <input type="text" maxlength="1" required
+                                    class="w-10 h-10 border border-gray-200 rounded-full text-center text-lg font-bold bg-white focus:outline-none focus:border-[#1A1A1A] focus:shadow-md"
+                                    oninput="this.classList.add('bg-black', 'text-white'); this.nextElementSibling.focus();">
+                                <input type="text" maxlength="1" required
+                                    class="w-10 h-10 border border-gray-200 rounded-full text-center text-lg font-bold bg-white focus:outline-none focus:border-[#1A1A1A] focus:shadow-md"
+                                    oninput="this.classList.add('bg-black', 'text-white'); this.nextElementSibling.focus();">
+                                <input type="text" maxlength="1" required
+                                    class="w-10 h-10 border border-gray-200 rounded-full text-center text-lg font-bold bg-white focus:outline-none focus:border-[#1A1A1A] focus:shadow-md"
+                                    oninput="this.classList.add('bg-black', 'text-white'); this.nextElementSibling.focus();">
+                                <input type="text" maxlength="1" required
+                                    class="w-10 h-10 border border-gray-200 rounded-full text-center text-lg font-bold bg-white focus:outline-none focus:border-[#1A1A1A] focus:shadow-md"
+                                    oninput="this.classList.add('bg-black', 'text-white');">
+                            </div>
+                            <div id="otp-warning"
+                                class="flex text-center justify-center items-center text-red-500 text-sm hidden"><img
+                                    src="img/signin/Vector2.png" alt="logo" class="w-4 h-4 mr-2">Entered code is wrong!
+                            </div>
+                            <div class="flex justify-center text-sm">
+                                <a href="#" id="toggle-signin" class="text-black hover:underline">Login with Email</a>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-[#1A1A1A] text-white p-3 rounded-full font-medium hover:bg-[#333] transition cursor-pointer">Sign
+                                In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript for Toggling Forms -->
+        <script>
+            const signinForm = document.getElementById('signin-form');
+            const otpForm = document.getElementById('otp-form');
+            const toggleOtp = document.getElementById('toggle-otp');
+            const toggleSignin = document.getElementById('toggle-signin');
+
+            toggleOtp.addEventListener('click', (e) => {
+                e.preventDefault();
+                signinForm.classList.add('hidden');
+                otpForm.classList.remove('hidden');
+            });
+
+            toggleSignin.addEventListener('click', (e) => {
+                e.preventDefault();
+                otpForm.classList.add('hidden');
+                signinForm.classList.remove('hidden');
+            });
+        </script>
+
+        <!-- JavaScript for email/pass and OTP validation -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const signInForm = document.querySelector('#signin-form form');
+                const otpForm = document.querySelector('#otp-form form');
+                const emailInput = document.getElementById('email-input');
+                const passwordInput = document.getElementById('password-input');
+                const emailEmptyWarning = document.getElementById('email-empty-warning');
+                const passwordEmptyWarning = document.getElementById('password-empty-warning');
+                const emailWarning = document.getElementById('email-warning');
+                const otpInputs = document.querySelectorAll('#otp-form input[type="text"]');
+                const otpWarning = document.getElementById('otp-warning');
+
+                // Email/Password Form Submission
+                signInForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    // Reset all warnings
+                    emailEmptyWarning.classList.add('hidden');
+                    passwordEmptyWarning.classList.add('hidden');
+                    emailWarning.classList.add('hidden');
+
+                    // Check for empty fields
+                    if (!emailInput.value.trim()) {
+                        emailEmptyWarning.classList.remove('hidden');
+                        return;
+                    }
+                    if (!passwordInput.value.trim()) {
+                        passwordEmptyWarning.classList.remove('hidden');
+                        return;
+                    }
+
+                    // Check for specific invalid credentials
+                    if (emailInput.value === 'x@y.z' && passwordInput.value === '1234') {
+                        emailWarning.classList.remove('hidden');
+                    } else {
+                        alert('Login successful!'); // Placeholder for successful login
+                    }
+                });
+
+                // OTP Form Submission
+                otpForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    // Reset OTP warning
+                    otpWarning.classList.add('hidden');
+                    otpInputs.forEach(input => input.classList.remove('wrong-code'));
+
+                    // Collect the 6-digit PIN
+                    const otp = Array.from(otpInputs).map(input => input.value).join('');
+                    if (otp.length === 6) {
+                        if (otp === '123450') {
+                            otpWarning.classList.remove('hidden');
+                            otpInputs.forEach(input => input.classList.add('wrong-code'));
+                        } else {
+                            alert('OTP login successful!'); // Placeholder for successful OTP login
+                        }
+                    } else {
+                        alert('Please enter all 6 digits.');
+                    }
+                });
+
+                // Handle OTP input focus and styling
+                otpInputs.forEach((input, index) => {
+                    input.addEventListener('input', () => {
+                        // Remove bg-white when adding bg-black and text-white
+                        if (input.value.length === 1) {
+                            input.classList.remove('bg-white');
+                            input.classList.add('bg-black', 'text-white');
+                            if (index < otpInputs.length - 1) {
+                                otpInputs[index + 1].focus();
+                            }
+                        }
+                        // Remove bg-black and text-white when input is cleared, and re-add bg-white
+                        if (input.value.length === 0) {
+                            input.classList.remove('bg-black', 'text-white');
+                            input.classList.add('bg-white');
+                        }
+                    });
+
+
+                });
+            });
+        </script>
+
+        <!-- js to make password visible the eye-toggle -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const passwordInput = document.getElementById('password-input');
+                const eyeIcon = passwordInput.nextElementSibling; // The eye icon is the next sibling of the input
+
+                // Change input type to text when the eye icon is pressed down
+                eyeIcon.addEventListener('mousedown', () => {
+                    passwordInput.type = 'text';
+                });
+
+                // Revert input type to password when the eye icon is released
+                eyeIcon.addEventListener('mouseup', () => {
+                    passwordInput.type = 'password';
+                });
+
+                // Optional: Handle the case when the mouse leaves the icon while still pressed
+                eyeIcon.addEventListener('mouseleave', () => {
+                    passwordInput.type = 'password';
+                });
+            });
+
+        </script>
+</body>
+
+</html>
