@@ -256,9 +256,9 @@
           
             <!-- OTP Details (Fixed, No Scroll) -->
             <div class="flex-grow w-full md:w-1/2 h-auto rounded-md gap-2 md:px-5 border-l border-gray-200 flex flex-col bg-white">
-              <button class="self-start text-black font-['DM_Sans'] font-medium text-base leading-5 tracking-[-0.01em] underline mt-10 mb-5 pl-7 md:pl-0" id="closeBtn">Close</button>
+              <button class="self-start text-black font-['DM_Sans'] font-medium text-base leading-5 tracking-[-0.01em] underline mt-10 mb-5 pl-7 md:pl-0 cursor-pointer" id="closeBtn">Close</button>
               <div class="text-center space-y-8 mx-auto max-w-[50vh] flex flex-col pt-24 overflow-hidden" id="otpDetails">
-                <p class="hidden md:pt-96 pt-4" id="selectMessage">Select a rider to see info</p>
+                <p class="hidden md:pt-76 pt-4" id="selectMessage">Select a rider to see info</p>
                 <div class="space-y-2 rider-content">
                   <div class="w-[120px] h-[120px] bg-gray-300 rounded-full mx-auto overflow-hidden">
                     <img src="img/OTPverification/7a53e28c8e0fb3041bea3c00aa660a58.png" alt="" class="w-full h-full object-cover">
@@ -325,7 +325,7 @@
         <span class="absolute -top-1 -right-1 bg2 text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
       </div>
     </div>
-                           <!-- JS files -->
+                           <!-- JS files asif -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const closeBtn = document.getElementById('closeBtn');
@@ -344,7 +344,7 @@
         const searchOverlay = document.getElementById('searchOverlay');
         const searchCloseBtn = document.getElementById('searchCloseBtn');
 
-        // Close button functionality with hiding itself
+        // Close button functionality with hiding itself asif
         closeBtn.addEventListener('click', () => {
           riderContent.forEach(el => el.classList.add('hidden'));
           selectMessage.classList.remove('hidden');
@@ -371,7 +371,7 @@
           tickMark.classList.remove('hidden');
         }, 5000);
 
-        // Popup functionality
+        // Popup functionality asif
         acceptBtn.addEventListener('click', () => {
           if (!acceptBtn.disabled) {
             confirmPopup.classList.remove('hidden');

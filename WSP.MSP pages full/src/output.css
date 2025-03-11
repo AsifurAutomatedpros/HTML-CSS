@@ -2556,6 +2556,16 @@
       padding-inline: calc(var(--spacing) * 5);
     }
   }
+  .md\:pt-76 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 76);
+    }
+  }
+  .md\:pt-84 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 84);
+    }
+  }
   .md\:pt-96 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 96);
