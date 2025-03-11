@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="background1 h-full">
+    <div class="flex h-full flex-col lg:flex-row">
+      <!-- Sidebar -->
+      <div class="lg:w-auto md:w-full w-[95%] mx-auto lg:h-auto h-16 rounded-full lg:h-[834px] lg:bg-none bg-white flex justify-between p-4 flex-row lg:flex-col items-center mt-4 lg:max-h-screen lg:overflow-hidden overflow-visible">
+        <div class="bg-white text-2xl font-bold rounded-full flex items-center justify-center">
+          <img src="img/OTPverification/Logo (1).png" alt="brandLogo" class="w-12 h-12 object-contain">
+        </div>
+        <div class="w-auto h-auto gap-2 p-2 rounded-full bg-black text-white hidden lg:flex flex-col space-y-4 bg-black p-3">
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="img/OTPverification/Vector (6).png" alt="menuItem">
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="img/OTPverification/Vector (7).png" alt="menuItem">
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="img/OTPverification/Vector (8).png" alt="menuItem">
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="img/OTPverification/Vector (9).png" alt="menuItem">
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="img/OTPverification/Vector (10).png" alt="menuItem">
+          </div>
+          <div class="w-10 h-10 bg3 rounded-full relative flex items-center justify-center">
+            <img src="img/OTPverification/Vector (11).png" alt="menuItem">
+            <span class="absolute -top-1 -right-1 bg2 text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
+          </div>
+        </div>
+        <div class="gap-2 p-2 rounded-full flex lg:flex-col flex-row lg:mb-5">
+          <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+            <img src="img/OTPverification/4357ccf260ffcb69e9a74820541e8969.png" alt="profile" class="w-full h-full object-cover">
+          </div>
+          <div class="w-12 h-12 bg-black/10 rounded-full relative flex items-center justify-center">
+            <img src="img/OTPverification/Vector.png" alt="Notification">
+            <span class="absolute -top-1 -right-0 bg2 text-white text-xs border-2 md:w-4 w-3 md:h-4 h-3 flex items-center justify-center rounded-full"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex flex-grow flex-col h-full gap-0 py-2">
+        <div class="h-full w-full pt-[15px] pr-[16px] md:pb-[24px] pb-[16px] pl-[16px] mt-4">
+          <h2 class="font-bold md:text-[32px] text-[24px] leading-[40px] tracking-[3%] font-sans text-center md:text-left">
+            OTP Confirmation
+          </h2>
+        </div>
+        <div class="flex-grow h-screen gap-0 rounded-[24px] pr-0 flex flex-col md:flex-row min-h-screen ml-2 mr-2 mx-auto">
+            <!-- Sidebar (Sticky on Left) -->
+            <div class="w-full md:w-[320px] h-screen md:h-[100vh] gap-6 pt-4 pr-0 pb-1 pl-0 bg-white/60 sticky top-0 z-10">
+              <div class="flex justify-between w-full md:w-[320px] h-12 gap-4 px-4" id="headerSection">
+                <h3 class="text-lg font-semibold flex items-center gap-2">
+                  Pending
+                  <span class="bg-black text-white text-xs w-6 h-6 flex items-center justify-center rounded-full">1</span>
+                </h3>
+                <div class="w-[48px] h-[48px] border rounded-full flex items-center justify-center hidden md:flex" id="searchBtn">
+                  <img src="img/OTPverification/Vector13.png" alt="search" class="w-6 h-6">
+                </div>
+              </div>
+              <!-- Search Overlay (replaces headerSection when active) -->
+              <div class="w-full md:w-[320px] h-12 gap-4 px-4 hidden" id="searchOverlay">
+                <div class="bg-white rounded-full shadow-lg p-2 flex items-center w-full h-full">
+                  <input type="text" placeholder="Search..." class="w-full p-2 rounded-full border-none focus:outline-none">
+                  <button class="ml-2 text-gray-500 hover:text-gray-700 text-2xl font-bold" id="searchCloseBtn">×</button>
+                </div>
+              </div>
+              <div class="w-full md:w-[320px] h-[calc(100%-3rem)] overflow-y-auto overflow-x-hidden border-r border-black/10" style="height: calc(100vh - 3rem);">
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/fa1be286e3b17627a17bbb20e41bbdc5 (1).png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nasser Alsubai</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 - 10:24</p>
+                    </div>
+                  </div>
+                  <p class="font-sans font-medium text-base leading-6 flex items-center gap-2 flex-shrink-0">
+                    <span class="bg-red-500 text-white text-xs w-2 h-2 flex items-center justify-center rounded-full"></span>
+                    <span class="text-red-500">674951</span>
+                  </p>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/db97e1ca6fed7991ee043f68dedada2f.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Flores, Juanita</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:04</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/bd99690039f35eb8f13e58adae118810.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Miles, Esther</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:30</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/b2df27fc83f170007341358a821fa3bd.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Miles, Esther</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:26</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/5952fe808473ca364d45dfb6d88c433f.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Black, Marvin</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/4357ccf260ffcb69e9a74820541e8969.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Cooper, Kristin</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:18</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/432a756d1ebdc6151dac288cfa3ef1f7.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Flores, Juanita</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:07</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/91ff9a60558873cde74916290a286e84.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Black, Marvin</p>
+                      <p class="text-sm text-gray-500 truncate">8 Feb 2024 — 22:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full gap-2 px-4 py-3 border-b border-black/10 flex items-center justify-between cursor-pointer hover:bg-gray-100">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="img/OTPverification/dd7e73a85c1a6716fa387cae6e0d5302.png" alt="users" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium truncate">Nguyen, Shane</p>
+                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- OTP Details (Fixed, No Scroll) -->
+            <div class="flex-grow w-full md:w-1/2 h-auto rounded-md gap-2 md:px-5 border-l border-gray-200 flex flex-col bg-white">
+              <button class="self-start text-black font-['DM_Sans'] font-medium text-base leading-5 tracking-[-0.01em] underline mt-10 mb-5 pl-7 md:pl-0" id="closeBtn">Close</button>
+              <div class="text-center space-y-8 mx-auto max-w-[50vh] flex flex-col pt-24 overflow-hidden" id="otpDetails">
+                <p class="hidden md:pt-96 pt-4" id="selectMessage">Select a rider to see info</p>
+                <div class="space-y-2 rider-content">
+                  <div class="w-[120px] h-[120px] bg-gray-300 rounded-full mx-auto overflow-hidden">
+                    <img src="img/OTPverification/7a53e28c8e0fb3041bea3c00aa660a58.png" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-semibold">Nasser Alsubai</h3>
+                  <p class="text-gray-500">ID: 296571905</p>
+                </div>
+                <div class="space-y-4 rider-content">
+                  <div class="text-center">
+                    <div class="w-4 h-4 mx-auto hidden" id="tickMark">
+                      <img src="img/OTPverification/tick.png" alt="tick" class="w-full h-full object-contain">
+                    </div>
+                    <h1 class="text-3xl font-bold color-semitransparent" id="otpNumber">674951</h1>
+                  </div>
+                  <p class="text-gray-600">
+                    To accept cash transfers, the rider must enter this 4-digit code in their app before you can accept the transaction.
+                  </p>
+                </div>
+                <div class="space-y-4 rider-content">
+                  <p class="text-lg font-medium">The amount you should receive:</p>
+                  <p class="text-2xl font-bold">$86.60</p>
+                  <button class="bg-gray-300 text-gray-500 px-6 py-2 rounded-full cursor-not-allowed" id="acceptBtn" disabled>Accept Cash Transfer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50" id="confirmPopup">
+        <div class="bg-white p-6 rounded-lg w-[50%] max-w-md shadow-lg relative">
+          <div class="absolute top-4 right-4 flex items-center justify-center">
+            <button class="text-gray-500 rounded-full shadow-lg bg-white border-none hover:text-gray-700 text-2xl font-bold leading-none w-10 h-10 flex items-center justify-center p-0" id="popupCloseBtn">
+              <img class="items-center justify-center" src="img/OTPverification/cross.png" alt="crossbutton">
+            </button>
+          </div>
+          <h2 class="text-xl font-bold mb-6">Collect Confirmation</h2>
+          <p class="text-gray-600 mb-6 text-base">Do you confirm the receipt of the sum of <b class="font-600">$86.60</b> from <b class="font-600">Nasser Alsubai?</b></p>
+          <div class="flex justify-center">
+            <button class="px-4 py-4 bg-black text-white rounded-full w-full" id="confirmBtn">Confirm</button>
+          </div>
+        </div>
+      </div>
+                               <!-- sm and md screen navigarion bar bottom side -->
+    <div class="md:w-auto md:h-auto h-15 gap-2 p-2 rounded-full bg-black text-white fixed bottom-3 left-1/2 transform -translate-x-1/2 p-3 rounded-full flex md:space-x-4 space-x-2 lg:hidden z-20 pointer-events-auto">
+      <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+        <img src="img/OTPverification/Vector (6).png" alt="menuItems">
+      </div>
+      <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+        <img src="img/OTPverification/Vector (7).png" alt="menuItems">
+      </div>
+      <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+        <img src="img/OTPverification/Vector (8).png" alt="menuItems">
+      </div>
+      <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+        <img src="img/OTPverification/Vector (9).png" alt="menuItems">
+      </div>
+      <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+        <img src="img/OTPverification/Vector (10).png" alt="menuItems">
+      </div>
+      <div class="md:w-10 w-8 md:h-10 h-8 bg3 rounded-full relative flex items-center justify-center">
+        <img src="img/OTPverification/Vector (11).png" alt="menuItems">
+        <span class="absolute -top-1 -right-1 bg2 text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
+      </div>
+    </div>
+                           <!-- JS files -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const closeBtn = document.getElementById('closeBtn');
+        const otpDetails = document.getElementById('otpDetails');
+        const selectMessage = document.getElementById('selectMessage');
+        const riderItems = document.querySelectorAll('.w-full.gap-2.px-4.py-3.border-b.border-black\\/10');
+        const acceptBtn = document.getElementById('acceptBtn');
+        const otpNumber = document.getElementById('otpNumber');
+        const tickMark = document.getElementById('tickMark');
+        const confirmPopup = document.getElementById('confirmPopup');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const popupCloseBtn = document.getElementById('popupCloseBtn');
+        const riderContent = document.querySelectorAll('.rider-content');
+        const searchBtn = document.getElementById('searchBtn');
+        const headerSection = document.getElementById('headerSection');
+        const searchOverlay = document.getElementById('searchOverlay');
+        const searchCloseBtn = document.getElementById('searchCloseBtn');
+
+        // Close button functionality with hiding itself
+        closeBtn.addEventListener('click', () => {
+          riderContent.forEach(el => el.classList.add('hidden'));
+          selectMessage.classList.remove('hidden');
+          closeBtn.classList.add('hidden');
+        });
+
+        riderItems.forEach(item => {
+          item.addEventListener('click', () => {
+            riderContent.forEach(el => el.classList.remove('hidden'));
+            selectMessage.classList.add('hidden');
+            closeBtn.classList.remove('hidden');
+          });
+        });
+
+        // Accept button enable and style change with tick mark
+        setTimeout(() => {
+          acceptBtn.disabled = false;
+          acceptBtn.classList.remove('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
+          acceptBtn.classList.add('bg-black', 'text-white', 'cursor-pointer');
+          
+          // OTP number color change and tick mark
+          otpNumber.classList.remove('text-red-500');
+          otpNumber.style.color = 'rgba(0, 0, 0, 0.4)';
+          tickMark.classList.remove('hidden');
+        }, 5000);
+
+        // Popup functionality
+        acceptBtn.addEventListener('click', () => {
+          if (!acceptBtn.disabled) {
+            confirmPopup.classList.remove('hidden');
+            confirmPopup.classList.add('flex');
+          }
+        });
+
+        popupCloseBtn.addEventListener('click', () => {
+          confirmPopup.classList.add('hidden');
+          confirmPopup.classList.remove('flex');
+        });
+
+        // Confirm button functionality
+        confirmBtn.addEventListener('click', () => {
+          confirmPopup.classList.add('hidden');
+          confirmPopup.classList.remove('flex');
+          
+          acceptBtn.innerHTML = `
+            <img src="img/OTPverification/tick.png" alt="tick" class="w-4 h-4 mr-2 inline-block">
+            Cash transfer confirmed
+          `;
+          acceptBtn.classList.remove('bg-black', 'bg-green-500', 'text-white');
+          acceptBtn.classList.add('bg-white', 'text-green-500', 'border', 'border-green-500');
+          acceptBtn.disabled = true;
+        });
+
+        // Search functionality
+        searchBtn.addEventListener('click', () => {
+          headerSection.classList.add('hidden');
+          searchOverlay.classList.remove('hidden');
+        });
+
+        searchCloseBtn.addEventListener('click', () => {
+          searchOverlay.classList.add('hidden');
+          headerSection.classList.remove('hidden');
+        });
+      });
+    </script>
+</body>
+</html>
