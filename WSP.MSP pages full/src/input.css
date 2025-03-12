@@ -33,3 +33,44 @@
 .color-semitransparent{
 color: rgba(255, 86, 52, 1);
 }
+
+/* for add new order page */
+
+
+.selected-items-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+  
+  .selected-items-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .selected-items-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .selected-items-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+  
+
+  /* for sign in page */
+
+    /* Fallback CSS if output.css is not working */
+    .bg-gradient-custom {
+        background: linear-gradient(135deg, #fff5f7 0%, #ffe3e6 100%);
+    }
+
+    .wrong-code {
+        background-color: #e0e0e0;
+        border: 2px solid #ef4444;
+        color: #ef4444;
+    }
+
+    /* Style for empty field warnings */
+    #email-empty-warning,
+    #password-empty-warning {
+        display: none;
+    }
