@@ -1,0 +1,628 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-['DM_Sans'] background1 h-full">
+  <div class="flex h-full flex-col lg:flex-row">
+    <!-- Sidebar -->
+    <div
+      class="lg:w-auto md:w-full w-[95%] left-0 lg:h-full h-16 justify-between rounded-full lg:h-full lg:bg-none bg-white flex space-y-30 px-4 py-2 flex-row lg:flex-col items-center mt-4 lg:max-h-screen lg:overflow-hidden overflow-visible lg:static lg:ml-0 ml-auto">
+      <!-- Existing sidebar content remains unchanged -->
+      <div class="bg-white text-2xl font-bold rounded-full flex items-center justify-center self-start">
+        <img src="img/OTPverification/Logo (1).png" alt="brandLogo" class="w-12 h-12 object-contain">
+      </div>
+      <div
+        class="w-auto h-auto gap-2 p-2 rounded-full bg-black text-white hidden lg:flex flex-col space-y-4 bg-black p-3 self-center">
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="img/OTPverification/Vector (6).png" alt="menuItem">
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="img/OTPverification/Vector (7).png" alt="menuItem">
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="img/OTPverification/Vector (8).png" alt="menuItem">
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="img/OTPverification/Vector (9).png" alt="menuItem">
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="img/OTPverification/Vector (10).png" alt="menuItem">
+        </div>
+        <div class="w-10 h-10 bg3 rounded-full relative flex items-center justify-center">
+          <img src="img/OTPverification/Vector (11).png" alt="menuItem">
+          <span
+            class="absolute -top-1 -right-1 bg2 text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
+        </div>
+      </div>
+      <div class="gap-2 p-2 rounded-full flex lg:flex-col flex-row lg:mb-5 ">
+        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+          <img src="img/OTPverification/4357ccf260ffcb69e9a74820541e8969.png" alt="profile"
+            class="w-full h-full object-cover">
+        </div>
+        <div class="w-12 h-12 bg-black/10 rounded-full relative flex items-center justify-center">
+          <img src="img/OTPverification/Vector.png" alt="Notification">
+          <span
+            class="absolute -top-1 -right-0 bg2 text-white text-xs border-2 md:w-4 w-3 md:h-4 h-3 flex items-center justify-center rounded-full"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 ml-0 p-2 max-w-full">
+      <div class="flex flex-col items-start w-full">
+        <!-- Menu Management Section -->
+        <div class="md:flex hidden items-center justify-between px-6 py-4 w-auto my-auto overflow-hidden">
+          <!-- Left: Menu Management Title -->
+          <div class="text-l md:text-xl font-bold text-black">Menu Management</div>
+
+          <!-- Right: Buttons with Badges -->
+          <div class="flex items-center space-x-4 lg:ml-[30vw] md:ml-[20vw] ml-4">
+            <!-- ALL SERVICES Button -->
+            <button class="relative flex items-center px-4 py-2 text-white bg-black rounded-full cursor-pointer">
+              <span class="text-sm md:font-medium">All Services</span>
+              <span
+                class="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 text-xs font-bold text-black bg-white rounded-full shadow-md">16</span>
+            </button>
+
+            <!-- Dine-in Button -->
+            <button
+              class="relative flex items-center px-4 py-2 text-black bg-white bg-opacity-60 rounded-full cursor-pointer">
+              <span class="text-sm md:font-medium">Dine-in</span>
+              <span
+                class="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 text-xs font-bold text-black bg-white rounded-full shadow-md">3</span>
+            </button>
+
+            <!-- Delivery Button -->
+            <button
+              class="relative flex items-center px-4 py-2 text-black bg-white bg-opacity-60 rounded-full cursor-pointer">
+              <span class="text-sm font-medium">Delivery</span>
+              <span
+                class="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 text-xs font-bold text-black bg-white rounded-full shadow-md">2</span>
+            </button>
+
+            <!-- Pickup Button -->
+            <button
+              class="relative flex items-center px-4 py-2 text-black bg-white bg-opacity-60 rounded-full cursor-pointer">
+              <span class="text-sm font-medium">Pickup</span>
+              <span
+                class="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 text-xs font-bold text-black bg-white rounded-full shadow-md">11</span>
+            </button>
+          </div>
+        </div>
+        <!-- Time Slots -->
+        <div
+          class="px-14 md:text-xl sm:text-base font-medium tracking-normal leading-tight text-black whitespace-nowrap max-md:px-5 max-md:max-w-full">
+          <div class="flex items-end">
+            <button
+              class="flex relative justify-center items-start md:px-6 px-2 rounded-t-3xl bg-black/5 bg-opacity-10 min-h-16 max-md:px-5 cursor-pointer">
+              <span class="z-0 self-stretch my-auto">Breakfast</span>
+            </button>
+            <button class="gap-2 self-stretch px-6 py-5 rounded-3xl min-h-16 max-md:px-5 cursor-pointer">
+              Lunch
+            </button>
+            <button class="gap-2 self-stretch px-6 py-5 rounded-3xl min-h-16 max-md:px-5 cursor-pointer">
+              Dinner
+            </button>
+          </div>
+        </div>
+
+        <!-- Food Categories -->
+        <div class="flex gap-4 items-start pb-4 pl-6 w-full rounded-3xl max-md:pl-5 max-md:max-w-full ">
+          <div
+            class="flex gap-4 items-start py-4 pr-3.5 pl-4 rounded-l-3xl bg-black/5 bg-opacity-10 min-w-60 w-full max-md:max-w-full overflow-x-auto whitespace-nowrap direction-rtl">
+            <!-- Category Buttons -->
+            <button
+            class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+            <div
+              class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+              <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+              <span
+                class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                7
+              </span>
+            </div>
+          </button>
+
+            <button
+              class="flex justify-center items-center text-white whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-black bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Burgerss</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center text-black  justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  71
+                </span>
+              </div>
+            </button>
+
+            <!-- More category buttons... -->
+            <!-- Pizza -->
+            <button
+            class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+            <div
+              class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+              <span class="z-0 my-auto text-base tracking-normal">Soups</span>
+              <span
+                class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                7
+              </span>
+            </div>
+          </button>
+
+            <!-- Soups -->
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Soups</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  7
+                </span>
+              </div>
+            </button>
+
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  16
+                </span>
+              </div>
+            </button>
+
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  16
+                </span>
+              </div>
+            </button>
+
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  16
+                </span>
+              </div>
+            </button>
+
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  16
+                </span>
+              </div>
+            </button>
+
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  16
+                </span>
+              </div>
+            </button>
+
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  16
+                </span>
+              </div>
+            </button>
+
+            <button
+              class="flex justify-center items-center text-black whitespace-nowrap min-h-12 rounded-[32px] cursor-pointer">
+              <div
+                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 md:min-h-12 min-h-8 rounded-[32px] direction-ltr">
+                <span class="z-0 my-auto text-base tracking-normal">Kebab</span>
+                <span
+                  class="absolute -top-3 -right-3 z-0 self-start flex items-center justify-center w-8 h-8 text-sm font-bold leading-none bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                  16
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <!-- category item count and active,inactive -->
+        <div class="bg-[rgba(255, 255, 255, 0.7)] flex flex-col items-center justify-center max-h-20 w-[94vw] mx-auto">
+          <div class="w-full max-w-full p-4 bg-white border border-gray-200 rounded-lg shadow-md">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="text-black font-medium">Whole 'Burgers' Category</span>
+                <span class="text-gray-500 text-sm">12 items</span>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox"  checked class="sr-only peer">
+                <div
+                  class="w-11 h-6 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600">
+                </div>
+                <span  class="ml-2 text-sm font-medium text-gray-900">Active</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- all menu items -->
+        <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-11 gap-4 p-4 mx-auto">
+          <!-- Item 1 -->
+          <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+            <div class="grid  items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="text-black font-base font-[600]">Double Cheese</span>
+               
+              </div>
+              <div class="text-gray-500 text-sm">$22.50</div>
+              <label class="relative inline-flex items-center cursor-pointer mt-4">
+                <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                <div
+                  class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                </div>
+                <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+              </label>
+            </div>
+          </div>
+              <!-- Item 2 - 12 -->
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+              <div class=" bg-white rounded-lg shadow-md p-4 h-[142px] ">
+                <div class="grid  items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-black font-base font-[600]">Double Cheese</span>
+                   
+                  </div>
+                  <div class="text-gray-500 text-sm">$22.50</div>
+                  <label class="relative inline-flex items-center cursor-pointer mt-4">
+                    <input type="checkbox" id="toggleCheckbox" checked class="sr-only peer">
+                    <div
+                      class="w-11 h-6 bottom-0 left-0 bg-green-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 ">
+                    </div>
+                    <span id="toggleStatus" class="ml-2 text-sm font-medium text-gray-900">Active</span>
+                  </label>
+                </div>
+              </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Sidebar for responsive (unchanged) -->
+  <div
+    class="md:w-auto md:h-auto h-15 gap-2 p-2 rounded-full bg-black text-white fixed bottom-3 left-1/2 transform -translate-x-1/2 p-3 rounded-full flex md:space-x-4 space-x-2 lg:hidden z-20 pointer-events-auto">
+    <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+      <img src="img/OTPverification/Vector (6).png" alt="menuItems">
+    </div>
+    <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+      <img src="img/OTPverification/Vector (7).png" alt="menuItems">
+    </div>
+    <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+      <img src="img/OTPverification/Vector (8).png" alt="menuItems">
+    </div>
+    <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+      <img src="img/OTPverification/Vector (9).png" alt="menuItems">
+    </div>
+    <div class="md:w-10 w-8 md:h-10 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+      <img src="img/OTPverification/Vector (10).png" alt="menuItems">
+    </div>
+    <div class="md:w-10 w-8 md:h-10 h-8 bg3 rounded-full relative flex items-center justify-center">
+      <img src="img/OTPverification/Vector (11).png" alt="menuItems">
+      <span
+        class="absolute -top-1 -right-1 bg2 text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
+    </div>
+  </div>
+
+
+  <!-- Pop-up on inactive toggle -->
+  <div id="inactivationPopup" class="fixed inset-0 bg-black/5 bg-opacity-50 flex items-center justify-center hidden shadow-md  z-50">
+    <div class="bg-white rounded-2xl p-8 w-90 relative shadow-lg ">
+      <!-- Close Button -->
+      <button id="closePopup" class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-300">
+        <span class="text-gray-600"><img src="img/add-new-order/close.png" class="h-3 w-3 cursor-pointer" alt="close-icon"></span>
+      </button>
+  
+      <!-- Title and Info -->
+      <h2 class="text-lg font-semibold text-black">Inactivating Double Cheese Burger</h2>
+      <p class="text-sm text-gray-600 mt-2">What's the reason of inactivating "Double Cheese"?</p>
+  
+      <!-- Checkboxes -->
+      <div class="mt-4 space-y-2">
+        <label class="flex items-center space-x-10">
+          
+          <span class="text-base text-black">Ingredient out of stock</span><input type="radio" name="reason" value="out_of_stock" class="form-radio text-green-500 rounded-full h-5 w-5 ">
+        </label>
+        <label class="flex items-center space-x-19">
+          
+          <span class="text-base text-black">Wastage / spoiled</span><input type="radio" name="reason" value="wastage" class="form-radio text-green-500 rounded-full h-5 w-5 ">
+        </label>
+        <label class="flex items-center space-x-42">
+          
+          <span class="text-base text-black">Other</span><input type="radio" name="reason" value="other" class="form-radio text-green-500 rounded-full h-5 w-5">
+        </label>
+      </div>
+  
+      <!-- Other Reason Input (hidden by default, show when "Other" is selected) -->
+      <div id="otherReason" class="mt-2 ">
+        <input type="text" placeholder="Write the reason..." class="w-full p-2 border border-gray-300 rounded-full text-sm">
+      </div>
+  
+      <!-- Submit Button -->
+      <button id="submitChanges" class="mt-4 w-full bg-black text-white py-2 rounded-full hover:bg-gray-800 cursor-pointer">
+        Save Changes
+      </button>
+    </div>
+  </div>
+
+
+  <!-- JS files for toggle and others -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkbox = document.getElementById('toggleCheckbox');
+      const statusText = document.getElementById('toggleStatus');
+      const popup = document.getElementById('inactivationPopup');
+  
+      checkbox.addEventListener('change', () => {
+        if (!checkbox.checked) {
+          statusText.textContent = 'Inactive';
+          // Show the popup
+          if (popup) popup.classList.remove('hidden');
+        } else {
+          statusText.textContent = 'Active';
+          // Hide the popup if it exists
+          if (popup) popup.classList.add('hidden');
+        }
+      });
+  
+      // Close popup functionality
+      const closeButton = document.getElementById('closePopup');
+      if (closeButton) {
+        closeButton.addEventListener('click', () => {
+          popup.classList.add('hidden');
+          checkbox.checked = true; // Reset checkbox to active
+          statusText.textContent = 'Active';
+        });
+      }
+  
+      // Submit functionality (optional, can be expanded)
+      const submitButton = document.getElementById('submitChanges');
+      if (submitButton) {
+        submitButton.addEventListener('click', () => {
+          // Handle submission logic here (e.g., save reason)
+          alert('Changes saved!'); // Placeholder
+          popup.classList.add('hidden');
+          checkbox.checked = true; // Reset after submission
+          statusText.textContent = 'Active';
+        });
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
