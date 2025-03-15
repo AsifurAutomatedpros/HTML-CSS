@@ -13,9 +13,9 @@
 </head>
 
 <body class="font-['DM_Sans'] background1 h-full">
-    <div id="menu-container" class="flex h-full flex-col lg:flex-row">
+    <div id="menu-container" class="flex h-full flex-col lg:flex-row px-2 overflow-hidden">
 
-        <main class="flex flex-col items-start w-full flex-[1_0_0]">
+        <main class="flex flex-col items-start w-full flex-[1_0_0] ">
             <header class="flex justify-between items-center py-6 pr-4 pl-0 w-full max-sm:p-4">
                 <h1 class="text-3xl font-bold tracking-tighter leading-10 text-black max-sm:text-2xl">
                     Profile
@@ -92,43 +92,41 @@
                 </div>
             </header>
 
-            <section class="flex gap-2 items-start pt-0 pr-4 pb-4 pl-0 w-full max-md:flex-wrap">
-                <article class="flex gap-4 items-center p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-[1_0_0]">
-                    <img src="img/OTPverification/4357ccf260ffcb69e9a74820541e8969.png" alt="Profile"
-                        class="w-[60px] h-[60px] rounded-[80px]" />
+            <section class="lg:flex  flex-wrap gap-4 items-start pt-0 pr-4 pb-4 pl-0 w-[95%] mx-auto lg:flex-row lg:flex-nowrap grid grid-cols-2">
+                <!-- Article 1: Profile Picture and Name -->
+                <article class="flex gap-4 items-center p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-1 min-w-[300px] md:min-w-0">
+                    <img src="img/OTPverification/4357ccf260ffcb69e9a74820541e8969.png" alt="Profile" class="w-[60px] h-[60px] rounded-[80px]" />
                     <h2 class="gap-1 text-xl font-medium tracking-normal leading-6 text-black">
                         Sarah Hermant
                     </h2>
                 </article>
-
-                <article class="flex flex-col gap-4 items-start p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-[1_0_0]">
+            
+                <!-- Article 2: Email -->
+                <article class="flex flex-col gap-4 items-start p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-1 min-w-[300px] md:min-w-0">
                     <div class="flex gap-1 items-center w-full">
-                        <img class="h-3 w-4" src="img/profile/email.png">
-
+                        <img class="h-3 w-4" src="img/profile/email.png" alt="email">
                         <span class="flex-1 text-sm leading-4 text-black text-opacity-60">Email</span>
                     </div>
                     <p class="w-full text-base tracking-normal leading-6 text-black">
                         Saraorderific@gmail.com
                     </p>
                 </article>
-
-                <article
-                    class="flex flex-col gap-4 items-start p-4 w-44 rounded-2xl bg-black/5 bg-opacity-10 max-md:flex-1">
+            
+                <!-- Article 3: Join Date -->
+                <article class="flex flex-col gap-4 items-start p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-1 min-w-[200px] md:min-w-0">
                     <div class="flex gap-1 items-center w-full">
-                        <img class="h-3 w-4" src="img/profile/profile-icon.png">
-
+                        <img class="h-3 w-4" src="img/profile/profile-icon.png" alt="profile">
                         <span class="flex-1 text-sm leading-4 text-black text-opacity-60">Join at</span>
                     </div>
                     <time datetime="2023-06-17" class="w-full text-base tracking-normal leading-6 text-black">
                         Mon, 17 Jun 2023
                     </time>
                 </article>
-
-                <article
-                    class="flex flex-col gap-4 items-start p-4 w-44 rounded-2xl bg-black/5 bg-opacity-10 max-md:flex-1">
+            
+                <!-- Article 4: Role -->
+                <article class="flex flex-col gap-4 items-start p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-1 min-w-[200px] md:min-w-0">
                     <div class="flex gap-1 items-center w-full">
-                        <img class="h-4 w-4" src="img/profile/Role-settings.png">
-
+                        <img class="h-4 w-4" src="img/profile/Role-settings.png" alt="role">
                         <span class="flex-1 text-sm leading-4 text-black text-opacity-60">Role</span>
                     </div>
                     <p class="w-full text-base tracking-normal leading-6 text-black">Staff</p>

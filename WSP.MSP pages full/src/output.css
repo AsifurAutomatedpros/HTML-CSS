@@ -937,6 +937,12 @@
   .min-w-60 {
     min-width: calc(var(--spacing) * 60);
   }
+  .min-w-\[200px\] {
+    min-width: 200px;
+  }
+  .min-w-\[300px\] {
+    min-width: 300px;
+  }
   .min-w-screen {
     min-width: 100vw;
   }
@@ -3311,6 +3317,11 @@
       display: flex;
     }
   }
+  .md\:grid {
+    @media (width >= 48rem) {
+      display: grid;
+    }
+  }
   .md\:h-4 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 4);
@@ -3371,6 +3382,11 @@
       max-width: 90vw;
     }
   }
+  .md\:min-w-0 {
+    @media (width >= 48rem) {
+      min-width: calc(var(--spacing) * 0);
+    }
+  }
   .md\:flex-\[1\] {
     @media (width >= 48rem) {
       flex: 1;
@@ -3379,6 +3395,11 @@
   .md\:flex-\[2\] {
     @media (width >= 48rem) {
       flex: 2;
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-5 {
@@ -3587,6 +3608,16 @@
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
+    }
+  }
+  .lg\:flex-nowrap {
+    @media (width >= 64rem) {
+      flex-wrap: nowrap;
+    }
+  }
+  .lg\:flex-wrap {
+    @media (width >= 64rem) {
+      flex-wrap: wrap;
     }
   }
   .lg\:space-y-\[100\%\] {
