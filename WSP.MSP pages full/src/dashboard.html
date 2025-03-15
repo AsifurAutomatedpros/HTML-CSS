@@ -1,0 +1,546 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-['DM_Sans'] background1 h-full">
+    <div id="menu-container" class="flex h-full flex-col lg:flex-row">
+        <main class="flex flex-col items-start self-stretch flex-[1_0_0] font-['DM_Sans']">
+            <div class="flex items-center justify-between w-full">
+                <h1
+                    class="flex flex-wrap items-center self-stretch py-6 px-4 my-auto text-3xl font-bold tracking-tighter leading-none text-black min-w-60 w-[923px] max-md:max-w-full">
+                    Dashboard
+                    <div class="flex gap-2 self-stretch my-auto min-h-12"></div>
+                </h1>
+            
+                <div class="self-stretch my-auto text-sm leading-none w-[163px]">
+                    <div class="relative flex gap-2 items-start">
+                        <div class="flex flex-col gap-2 items-start w-[163px]">
+                            <button id="sortButton"
+                                class="flex gap-2 items-center py-2 pr-3 pl-5 w-full h-12 rounded-3xl bg-white bg-opacity-60 border border-1 border-black/10">
+                                <div class="flex flex-col flex-1 gap-1 justify-center items-start h-10 rounded-2xl">
+                                    <span class="w-full text-sm leading-4 text-black text-opacity-60">
+                                        Range
+                                    </span>
+                                    <span
+                                        class="overflow-hidden w-full text-xs font-bold leading-4 text-black text-ellipsis ">
+                                        Today
+                                    </span>
+                                </div>
+                                <img src="img/profile/down-arrow.png" alt="down-arrow" class="h-2 w-3 cursor-pointer">
+                            </button>
+                            <!-- Dropdown -->
+                            <div id="sortDropdown"
+                                class="hidden absolute top-14 left-0 w-full bg-white rounded-2xl shadow-lg shadow-black/10 z-20 items-center">
+                                <ul class="py-2 bg-white rounded-2xl">
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer border-b-1 border-black/10">
+                                        Today
+                                    </li>
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer border-b-1 border-black/10">
+                                        Weekly
+                                    </li>
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer border-b-1 border-black/10">
+                                        Monthly
+                                    </li>
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer">
+                                        Yearly
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <main class="px-4 w-full max-md:max-w-full">
+                <section
+                    class="flex flex-wrap gap-6 items-center p-4 w-full text-black rounded-2xl bg-black/5 bg-opacity-10 min-h-20 max-md:max-w-full">
+                    <h2 class="gap-2 self-stretch my-auto text-xl font-medium tracking-normal leading-tight">
+                        Restaurant Status
+                    </h2>
+                    <div
+                        class="flex gap-2 items-start self-stretch my-auto text-base tracking-normal whitespace-nowrap min-w-60">
+                        <button class="flex justify-center items-center text-white min-h-12 rounded-[32px]">
+                            <span class="flex items-center gap-2 px-4 bg-green-700 min-h-12 rounded-[32px]">
+                                OPEN
+                            </span>
+                        </button>
+                        <button class="flex justify-center items-center text-white min-h-12 rounded-[32px]">
+                            <span class="flex items-center gap-2 px-4 bg-green-700 min-h-12 rounded-[32px]">
+                                BUSY
+                            </span>
+                        </button>
+                        <button class="flex justify-center items-center text-white min-h-12 rounded-[32px]">
+                            <span class="flex items-center gap-2 px-4 bg-green-700 min-h-12 rounded-[32px]">
+                                CLOSED
+                            </span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="flex flex-wrap gap-2 items-start mt-2 w-full text-black max-md:max-w-full lg:flex-nowrap">
+                    <article class="flex-1 shrink p-4 text-white whitespace-nowrap bg-red-500 rounded-2xl basis-0 min-w-[200px]">
+                        <img src="img/dashboard/revenue.png" alt="Revenue icon" class="object-contain w-6 aspect-square" />
+                        <div class="mt-20 w-full max-md:mt-10">
+                            <h3 class="text-base tracking-normal">Revenue</h3>
+                            <p class="mt-1 text-2xl font-bold tracking-tight leading-none">$3,145.00</p>
+                        </div>
+                    </article>
+                
+                    <article class="flex-1 shrink p-4 bg-white rounded-2xl basis-0 min-w-[200px]">
+                        <img src="img/dashboard/allorder.png" alt="Orders icon" class="object-contain w-6 aspect-square" />
+                        <div class="mt-20 w-full max-md:mt-10">
+                            <h3 class="text-base tracking-normal">All Order</h3>
+                            <p class="mt-1 text-2xl font-bold tracking-tight leading-none">290</p>
+                        </div>
+                    </article>
+                
+                    <article class="flex-1 shrink p-4 bg-white rounded-2xl basis-0 min-w-[200px]">
+                        <img src="img/dashboard/paidorders.png" alt="Paid orders icon" class="object-contain w-6 aspect-square" />
+                        <div class="mt-20 w-full max-md:mt-10">
+                            <h3 class="text-base tracking-normal">Paid Orders</h3>
+                            <p class="mt-1 text-2xl font-bold tracking-tight leading-none">173</p>
+                        </div>
+                    </article>
+                
+                    <article class="flex-1 shrink p-4 whitespace-nowrap bg-white rounded-2xl basis-0 min-w-[200px]">
+                        <img src="img/dashboard/accepted.png" alt="Accepted orders icon" class="object-contain w-6 aspect-square" />
+                        <div class="mt-20 w-full max-md:mt-10">
+                            <h3 class="text-base tracking-normal">Accepted</h3>
+                            <p class="mt-1 text-2xl font-bold tracking-tight leading-none">38</p>
+                        </div>
+                    </article>
+                
+                    <article class="flex-1 shrink p-4 whitespace-nowrap bg-white rounded-2xl basis-0 min-w-[200px]">
+                        <img src="img/dashboard/completed.png" alt="Completed orders icon" class="object-contain w-6 aspect-square" />
+                        <div class="mt-20 w-full max-md:mt-10">
+                            <h3 class="text-base tracking-normal">Completed</h3>
+                            <p class="mt-1 text-2xl font-bold tracking-tight leading-none">155</p>
+                        </div>
+                    </article>
+                
+                    <article class="flex-1 shrink p-4 whitespace-nowrap bg-white rounded-2xl basis-0 min-w-[200px]">
+                        <img src="img/dashboard/cancelled.png" alt="Canceled orders icon" class="object-contain w-6 aspect-square" />
+                        <div class="mt-20 w-full max-md:mt-10">
+                            <h3 class="text-base tracking-normal">Canceled</h3>
+                            <p class="mt-1 text-2xl font-bold tracking-tight leading-none">8</p>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="flex flex-wrap gap-2 items-center mt-2 w-full max-md:max-w-full">
+                    <div class="flex-1 shrink self-stretch px-4 py-4 my-auto rounded-2xl basis-0 bg-black/5 bg-opacity-10 min-h-auto min-w-60 max-w-full lg:w-[30%]">
+                        <h2 class="text-xl font-medium tracking-normal leading-tight text-black">
+                            Popular Items
+                        </h2>
+                        <div class="mt-4 w-full text-sm grid grid-cols-5 lg:grid-cols-2 gap-2">
+                            <article class="p-4 rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold leading-4 text-black">
+                                    Double Chicken Burger + French fries
+                                </h3>
+                                <div class="flex gap-1 items-start mt-5 w-full leading-none whitespace-nowrap">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">88</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 leading-none rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Mexican Burger</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full whitespace-nowrap max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">74</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 leading-none rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Double Cheese</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full whitespace-nowrap max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">56</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold leading-4 text-black">
+                                    Double Spicy Bean Burger
+                                </h3>
+                                <div class="flex gap-1 items-start mt-9 w-full leading-none whitespace-nowrap">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">41</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Potato Gems</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full whitespace-nowrap max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">38</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 whitespace-nowrap rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Beer</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">32</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Potato Gems</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full whitespace-nowrap max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">38</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 whitespace-nowrap rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Beer</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">32</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Potato Gems</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full whitespace-nowrap max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">38</p>
+                                </div>
+                            </article>
+                    
+                            <article class="p-4 whitespace-nowrap rounded-2xl bg-white bg-opacity-60 min-h-[116px]">
+                                <h3 class="font-bold text-black">Beer</h3>
+                                <div class="flex gap-1 items-start mt-14 w-full max-md:mt-10">
+                                    <p class="text-black">Order:</p>
+                                    <p class="flex-1 shrink font-bold text-black basis-0">32</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="self-stretch my-auto min-w-60 w-full lg:w-[70%] max-md:max-w-full mt-0">
+                        <section
+                            class="overflow-hidden relative px-4 pt-4 pb-7 w-full text-sm leading-none text-black rounded-2xl bg-black/5 bg-opacity-10 min-h-[309px] max-md:max-w-full">
+                            <h2
+                                class="z-0 gap-10 self-stretch w-full text-xl font-medium tracking-normal leading-tight max-md:max-w-full">
+                                Completed Orders
+                            </h2>
+                            <div
+                                class="flex z-0 flex-wrap gap-2.5 justify-between items-end mt-16 whitespace-nowrap max-md:mt-10 max-md:max-w-full">
+                                <!-- Bar Chart Items -->
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Jan
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Feb
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Mar
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Apr
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            May
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Jun
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Jul
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Aug
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Sep
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Oct
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Nov
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex relative gap-2 items-start w-12 min-h-[178px] rounded-[48px]">
+                                    <div
+                                        class="flex absolute right-0 bottom-0 z-0 shrink-0 w-12 bg-black/5 bg-opacity-10 h-[178px] rounded-[32px]">
+                                    </div>
+                                    <img src="img/dashboard/Bg.png"
+                                        alt="January chart"
+                                        class="object-contain absolute right-0 bottom-0 z-0 shrink-0 w-12 aspect-[0.27] h-[178px] rounded-[32px]" />
+                                    <div
+                                        class="flex z-0 gap-2 items-center self-end px-1 pt-24 pb-1 w-12 bg-white min-h-[142px] rounded-[48px]">
+                                        <div
+                                            class="flex items-center gap-2 self-stretch px-2 w-10 h-10 bg-black/5 bg-opacity-10 min-h-10 rounded-[48px]">
+                                            Dec
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute z-0 gap-2 self-stretch px-2 py-3 h-10 font-bold text-white whitespace-nowrap bg-black/5 rounded-2xl left-[305px] min-h-10 min-w-[50px] top-[53px] w-[50px]">
+                                269
+                            </div>
+                        </section>
+
+                        <section
+                            class="overflow-hidden px-4 pt-4 pb-7 mt-2 w-full rounded-2xl bg-black/5 bg-opacity-10 min-h-[365px] max-md:max-w-full">
+                            <div class="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
+                                <h2
+                                    class="self-stretch my-auto text-xl font-medium tracking-normal leading-tight text-black">
+                                    Payment Type Distribution
+                                </h2>
+                                
+                            </div>
+                            <div class="flex flex-wrap gap-6 items-center max-w-full text-black h-[272px] w-[564px]">
+                                <img src="img/dashboard/Donut.png"
+                                    alt="Payment distribution chart"
+                                    class="object-contain self-stretch my-auto w-80 aspect-square min-w-60" />
+                                <div class="flex-1 shrink self-stretch my-auto basis-0 max-w-[350px]">
+                                    <!-- Payment type labels -->
+                                    <div class="flex gap-1 items-center w-full mb-2.5">
+                                        <div
+                                            class="flex shrink-0 self-stretch my-auto w-5 h-2 bg-red-500 rounded-[29px]">
+                                        </div>
+                                        <p class="flex-1 shrink self-stretch my-auto text-sm leading-none basis-0">
+                                            Card
+                                        </p>
+                                        <p
+                                            class="self-stretch my-auto w-20 text-base font-medium tracking-normal leading-none text-right">
+                                            $ 1,400
+                                        </p>
+                                    </div>
+                                    <div class="flex gap-1 items-center w-full mb-2.5">
+                                        <div
+                                            class="flex shrink-0 self-stretch my-auto w-5 h-2 bg-red-500 rounded-[29px]">
+                                        </div>
+                                        <p class="flex-1 shrink self-stretch my-auto text-sm leading-none basis-0">
+                                            Cash
+                                        </p>
+                                        <p
+                                            class="self-stretch my-auto w-20 text-base font-medium tracking-normal leading-none text-right">
+                                            $ 1,000
+                                        </p>
+                                    </div>
+                                    <div class="flex gap-1 items-center w-full mb-2.5">
+                                        <div
+                                            class="flex shrink-0 self-stretch my-auto w-5 h-2 bg-red-500 rounded-[29px]">
+                                        </div>
+                                        <p class="flex-1 shrink self-stretch my-auto text-sm leading-none basis-0">
+                                            PayPal
+                                        </p>
+                                        <p
+                                            class="self-stretch my-auto w-20 text-base font-medium tracking-normal leading-none text-right">
+                                            $ 2,200
+                                        </p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </main>
+        </main>
+
+    </div>
+    <!-- sm and md screen navigarion bar bottom side -->
+    <div id="Responsive-menu-container">
+    </div>
+
+
+
+
+    <!-- Menu JS file -->
+    <script>
+        fetch('Desktop-menu.html')
+            .then(response => response.text())
+            .then(data => {
+                const menuContainer = document.getElementById('menu-container'); // Replace with your desired ID
+                if (menuContainer) {
+                    menuContainer.insertAdjacentHTML('afterbegin', data); // Adds at start of div, keeps existing content
+                } else {
+                    console.log('Menu container not found');
+                }
+            })
+            .catch(error => console.log('Error loading menu:', error));
+    </script>
+    <!-- Reposnsive -->
+    <script>
+        fetch('Responsive-menu.html')
+            .then(response => response.text())
+            .then(data => {
+                const menuContainer = document.getElementById('Responsive-menu-container'); // Replace with your desired ID
+                if (menuContainer) {
+                    menuContainer.insertAdjacentHTML('afterbegin', data); // Adds at start of div, keeps existing content
+                } else {
+                    console.log('Menu container not found');
+                }
+            })
+            .catch(error => console.log('Error loading menu:', error));
+    </script>
+    <!-- js for range dropdown -->
+    <script>
+        // Sort Dropdown Logic
+        const sortButton = document.getElementById('sortButton');
+        const sortDropdown = document.getElementById('sortDropdown');
+        sortButton.addEventListener('click', () => {
+            sortDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (event) => {
+            if (!sortButton.contains(event.target) && !sortDropdown.contains(event.target)) {
+                sortDropdown.classList.add('hidden');
+            }
+        });
+        </script>
+
+</body>
+
+</html>
