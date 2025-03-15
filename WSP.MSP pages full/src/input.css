@@ -74,3 +74,9 @@ color: rgba(255, 86, 52, 1);
     #password-empty-warning {
         display: none;
     }
+
+    /*  Profile page  */
+
+    .hover-orange {
+        color: rgba(255, 86, 52, 1);
+    }

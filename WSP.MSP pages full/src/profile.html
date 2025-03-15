@@ -1,0 +1,671 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-['DM_Sans'] background1 h-full">
+    <div id="menu-container" class="flex h-full flex-col lg:flex-row">
+
+        <main class="flex flex-col items-start w-full flex-[1_0_0]">
+            <header class="flex justify-between items-center py-6 pr-4 pl-0 w-full max-sm:p-4">
+                <h1 class="text-3xl font-bold tracking-tighter leading-10 text-black max-sm:text-2xl">
+                    Profile
+                </h1>
+                <div class="flex gap-2 items-center">
+                    <!-- Edit Profile Button -->
+                    <button id="editProfileButton"
+                        class="flex gap-1 items-center py-2 pr-4 pl-3 h-12 bg-black/5 bg-opacity-0 border border-1 border-black/10 rounded-[48px] max-sm:hidden cursor-pointer">
+                        <img class="w-3 h-3" src="img/profile/edit.png" alt="edit">
+                        <span class="text-sm font-bold leading-4 text-black">Edit Profile</span>
+                    </button>
+
+                    <!-- Edit Profile Popup (Initially Hidden) -->
+                    <div id="editProfilePopup"
+                        class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                        <div class="bg-white rounded-2xl shadow-lg w-[400px] p-6 relative">
+                            <!-- Header -->
+                            <div class="flex justify-between items-center mb-6">
+                                <h2 class="text-xl font-medium text-black">Edit Profile</h2>
+                                <button id="closePopupButton" class="text-black text-xl font-bold rounded-full bg-white p-2  shadow-lg cursor-pointer"><img src="img/OTPverification/cross.png" alt="cross-button"> </button>
+                            </div>
+
+                            <!-- Profile Photo -->
+                            <div class="flex space-x-4 items-center mb-6">
+                                <div class="w-15 h-15 rounded-full bg-gray-200 flex items-center justify-center mb-2">
+                                    <img src="img/OTPverification/4357ccf260ffcb69e9a74820541e8969.png" alt="Profile Photo"
+                                        class="w-full h-full rounded-full object-cover">
+                                </div>
+                                <button class="flex items-center gap-1 text-sm text-black/60 bg-black/10 rounded-full px-2">
+                                    <img src="img/profile/camera.png" alt="edit" class="w-[16px] h-[14px] ">
+                                    Upload a Photo
+                                </button>
+                            </div>
+
+                            <!-- Form Fields -->
+                            <div class="flex flex-col gap-4 mb-6">
+                                <!-- First Name -->
+                                <div class="flex items-center gap-2 border border-black/10 rounded-full px-0 py-0">
+                                    <span class="bg-black/10 p-3 rounded-full "><img src="img/profile/edit2.png" alt="user" class="w-4 h-3 "></span>
+                                    <input type="text" value="Sarah"
+                                        class="w-full text-sm text-black placeholder:text-black/60 focus:outline-none"
+                                        placeholder="First Name">
+                                </div>
+                                <!-- Last Name -->
+                                <div class="flex items-center gap-2 border border-black/10 rounded-full px-0 py-0">
+                                    <span class="bg-black/10 p-3 rounded-full "><img src="img/profile/edit2.png" alt="user" class="w-4 h-3"></span>
+                                    <input type="text" value="Herman"
+                                        class="w-full text-sm text-black placeholder:text-black/60 focus:outline-none"
+                                        placeholder="Last Name">
+                                </div>
+                                <!-- Email -->
+                                <div class="flex items-center gap-2 border border-black/10 rounded-full px-0 py-0">
+                                    <span class="bg-black/10 p-3 rounded-full "><img src="img/profile/email2.png" alt="email" class="w-4 h-3"></span>
+                                    <input type="email" value="sarahherman0@gmail.com"
+                                        class="w-full text-sm text-black placeholder:text-black/60 focus:outline-none"
+                                        placeholder="Email">
+                                </div>
+                            </div>
+
+                           
+                           
+
+                            <!-- Save Changes Button -->
+                            <button class="w-full h-12 bg-black hover:text-black hover:bg-black/10 text-white rounded-full text-base font-bold cursor-pointer">Save
+                                Changes</button>
+                        </div>
+                    </div>
+                    <button
+                        class="flex justify-center items-center w-12 h-12 border border-1 border-black/10 rounded-[48px] cursor-pointer"
+                        aria-label="Logout">
+                        <img class="w-5 h-5" src="img/profile/logout.png">
+
+                    </button>
+                </div>
+            </header>
+
+            <section class="flex gap-2 items-start pt-0 pr-4 pb-4 pl-0 w-full max-md:flex-wrap">
+                <article class="flex gap-4 items-center p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-[1_0_0]">
+                    <img src="img/OTPverification/4357ccf260ffcb69e9a74820541e8969.png" alt="Profile"
+                        class="w-[60px] h-[60px] rounded-[80px]" />
+                    <h2 class="gap-1 text-xl font-medium tracking-normal leading-6 text-black">
+                        Sarah Hermant
+                    </h2>
+                </article>
+
+                <article class="flex flex-col gap-4 items-start p-4 rounded-2xl bg-black/5 bg-opacity-10 flex-[1_0_0]">
+                    <div class="flex gap-1 items-center w-full">
+                        <img class="h-3 w-4" src="img/profile/email.png">
+
+                        <span class="flex-1 text-sm leading-4 text-black text-opacity-60">Email</span>
+                    </div>
+                    <p class="w-full text-base tracking-normal leading-6 text-black">
+                        Saraorderific@gmail.com
+                    </p>
+                </article>
+
+                <article
+                    class="flex flex-col gap-4 items-start p-4 w-44 rounded-2xl bg-black/5 bg-opacity-10 max-md:flex-1">
+                    <div class="flex gap-1 items-center w-full">
+                        <img class="h-3 w-4" src="img/profile/profile-icon.png">
+
+                        <span class="flex-1 text-sm leading-4 text-black text-opacity-60">Join at</span>
+                    </div>
+                    <time datetime="2023-06-17" class="w-full text-base tracking-normal leading-6 text-black">
+                        Mon, 17 Jun 2023
+                    </time>
+                </article>
+
+                <article
+                    class="flex flex-col gap-4 items-start p-4 w-44 rounded-2xl bg-black/5 bg-opacity-10 max-md:flex-1">
+                    <div class="flex gap-1 items-center w-full">
+                        <img class="h-4 w-4" src="img/profile/Role-settings.png">
+
+                        <span class="flex-1 text-sm leading-4 text-black text-opacity-60">Role</span>
+                    </div>
+                    <p class="w-full text-base tracking-normal leading-6 text-black">Staff</p>
+                </article>
+            </section>
+
+            <section class="flex gap-2 items-start pr-4 w-full max-md:flex-wrap">
+                <div class="flex flex-col flex-1 gap-5 items-start p-4 rounded-2xl bg-white bg-opacity-60">
+                    <header class="flex justify-between items-center w-full">
+                        <h2 class="text-xl font-medium tracking-normal leading-6 text-black">
+                            Activities
+                        </h2>
+                        <div id="searchContainer" class="flex gap-2 items-start">
+                            <!-- Default Content -->
+                            <div id="defaultContent" class="flex gap-2 items-start">
+                                <!-- Sort By Dropdown Container -->
+                                <div class="relative flex gap-2 items-start">
+                                    <div class="flex flex-col gap-2 items-start w-[163px]">
+                                        <button id="sortButton"
+                                            class="flex gap-2 items-center py-2 pr-3 pl-5 w-full h-12 rounded-3xl bg-white bg-opacity-60 border border-1 border-black/10">
+                                            <div class="flex flex-col flex-1 gap-1 justify-center items-start h-8">
+                                                <span class="w-full text-sm leading-4 text-black text-opacity-60">
+                                                    Sort by:
+                                                </span>
+                                                <span
+                                                    class="overflow-hidden w-full text-xs font-bold leading-4 text-black text-ellipsis">
+                                                    Newest First
+                                                </span>
+                                            </div>
+                                            <img src="img/profile/down-arrow.png" alt="down-arrow" class="h-2 w-3">
+                                        </button>
+                                        <!-- Dropdown -->
+                                        <div id="sortDropdown"
+                                            class="hidden absolute top-14 left-0 w-full bg-white rounded-2xl shadow-lg shadow-black/10 z-20 items-center">
+                                            <ul class="py-2 bg-white">
+                                                <li
+                                                    class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer border-b-1 border-black/10">
+                                                    Newest First
+                                                </li>
+                                                <li
+                                                    class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer">
+                                                    Oldest First
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="searchButton"
+                                    class="flex justify-center items-center w-12 h-12 border border-1 border-black/10 rounded-[48px] cursor-pointer "
+                                    aria-label="Search">
+                                    <img src="img/profile/search.png" class="h-4 w-4 items-center" alt="search">
+                                </button>
+                            </div>
+                            <!-- Textarea (Initially Hidden) -->
+                            <textarea id="searchTextarea"
+                                class="hidden w-full h-12 rounded-full shadow-[0_0_10px_rgba(0,0,0,0.08)] border border-black/10 px-5 py-2 text-sm text-black placeholder:text-black/60 focus:outline-none items-center"
+                                placeholder="Search here"></textarea>
+                        </div>
+                    </header>
+
+                    <div class="flex flex-col gap-2 items-start w-full h-[500px] overflow-hidden">
+                        <!-- Sticky Header -->
+                        <div
+                            class="sticky top-0 z-10 flex gap-2 items-start px-4 py-2 w-full rounded-2xl bg-black/5 bg-opacity-10">
+                            <h3 class="flex-1 text-sm font-bold leading-4 text-black text-opacity-60">
+                                Summary Activity
+                            </h3>
+                            <span class="text-sm font-bold leading-4 text-black text-opacity-60 w-[100px]">
+                                Date
+                            </span>
+                            <span class="text-sm font-bold leading-4 text-black text-opacity-60 w-[45px]">
+                                Time
+                            </span>
+                        </div>
+                        <!-- Scrollable Articles -->
+                        <div class="flex flex-col items-start w-full overflow-y-auto  scrollbar-hidden">
+                            <!-- Activity Items -->
+                            <article class="flex gap-2 items-start px-0 py-2 w-full  border-b-1 border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #202 order, "mushroom burger" was "accepted".
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T11:32"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    11:32
+                                </time>
+                            </article>
+
+
+
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1 border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #588 order, "Soda" was Ready.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T11:11"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    11:11
+                                </time>
+                            </article>
+
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                            <article class="flex gap-2 items-start px-0 py-2 w-full border-b-1  border-black/10">
+                                <p class="flex-1 text-base tracking-normal leading-6 text-black">
+                                    #164 order for "Table A101" Placed.
+                                </p>
+                                <time datetime="2024-01-06"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[100px]">
+                                    6 Jan 2024
+                                </time>
+                                <time datetime="2024-01-06T10:59"
+                                    class="text-sm leading-4 min-h-8 text-black text-opacity-60 w-[60px]">
+                                    10:59
+                                </time>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="flex flex-col gap-2 items-start max-md:w-full">
+                    <section
+                        class="flex flex-col gap-5 items-start p-4 rounded-2xl bg-white bg-opacity-60 w-[360px] max-md:w-full">
+                        <h2 class="text-xl font-medium tracking-normal leading-6 text-black">
+                            Default Page After Login
+                        </h2>
+                        <div class="flex flex-col gap-2 items-start w-full">
+                            <!-- Dropdown Container -->
+                            <div class="relative flex flex-col gap-2 items-start w-full">
+                                <button id="defaultPageButton"
+                                    class="flex gap-2 items-center py-2 pr-3 pl-5 w-full h-12 rounded-3xl bg-white bg-opacity-60 border border-1 border-black/10 cursor-pointer">
+                                    <span
+                                        class="flex-1 gap-1 w-full h-8 text-base tracking-normal leading-6 text-black text-opacity-60">
+                                        Kitchen Display
+                                    </span>
+                                    <img src="img/profile/down-arrow.png" alt="down-arrow" class="h-2 w-3">
+                                </button>
+                                <!-- Dropdown -->
+                                <div id="defaultPageDropdown"
+                                    class="hidden absolute top-14 left-0 w-full bg-white rounded-2xl shadow-[0_0_10px_rgba(0,0,0,0.08)] border border-black/10 z-10 ">
+                                    <ul class="py-2">
+                                        <li
+                                            class="px-5 py-2 text-sm text-center text-black hover:text-[rgba(255,86,52,1)] border-b-1 border-black/10 cursor-pointer ">
+                                            Kitchen Display
+                                        </li>
+                                        <li
+                                            class="px-5 py-2 text-sm text-center text-black hover:text-[rgba(255,86,52,1)] border-b-1 border-black/10 cursor-pointer ">
+                                            Dashboard
+                                        </li>
+                                        <li
+                                            class="px-5 py-2 text-sm text-center text-black hover:text-[rgba(255,86,52,1)] border-b-1 border-black/10 cursor-pointer ">
+                                            Table
+                                        </li>
+                                        <li
+                                            class="px-5 py-2 text-sm text-center text-black hover:text-[rgba(255,86,52,1)] border-b-1 border-black/10 cursor-pointer ">
+                                            OTP
+                                        </li>
+                                        <li
+                                            class="px-5 py-2 text-sm text-center text-black hover:text-[rgba(255,86,52,1)] border-b-1 border-black/10 cursor-pointer ">
+                                            OTP
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="gap-2 px-8 py-0 w-full h-12 text-base font-bold tracking-normal leading-6 bg-black bg-opacity-10 rounded-[32px] text-white text-opacity-40 cursor-pointer hover:text-black hover:bg-black/10">
+                            Set as default
+                        </button>
+                    </section>
+
+                    <section
+                        class="flex flex-col gap-5 items-start p-4 rounded-2xl bg-white bg-opacity-60 w-[360px] max-md:w-full">
+                        <h2 class="text-xl font-medium tracking-normal leading-6 text-black">
+                            Password &amp; Security
+                        </h2>
+                        <div class="flex flex-col gap-2 items-start w-full">
+                            <input type="password" placeholder="Current Password"
+                                class="flex gap-2 items-center px-5 py-2 w-full h-12 rounded-3xl bg-white bg-opacity-60 border border-1 border-black/10 text-base tracking-normal leading-6 text-black text-opacity-60" />
+                            <input type="password" placeholder="New Password"
+                                class="flex gap-2 items-center px-5 py-2 w-full h-12 rounded-3xl bg-white bg-opacity-60 border border-1 border-black/10 text-base tracking-normal leading-6 text-black text-opacity-60" />
+                        </div>
+                        <button
+                            class="gap-2 px-8 py-0 w-full h-12 text-base font-bold tracking-normal leading-6 bg-black bg-opacity-10 rounded-[32px] text-white text-opacity-40 cursor-pointer hover:text-black hover:bg-black/10">
+                            Change Password
+                        </button>
+                    </section>
+                </aside>
+            </section>
+        </main>
+
+
+    </div>
+
+
+    <!-- Sidebar for responsive (unchanged) -->
+    <div id="Responsive-menu-container">
+    </div>
+
+    <!-- Menu JS file -->
+    <script>
+        fetch('Desktop-menu.html')
+            .then(response => response.text())
+            .then(data => {
+                const menuContainer = document.getElementById('menu-container'); // Replace with your desired ID
+                if (menuContainer) {
+                    menuContainer.insertAdjacentHTML('afterbegin', data); // Adds at start of div, keeps existing content
+                } else {
+                    console.log('Menu container not found');
+                }
+            })
+            .catch(error => console.log('Error loading menu:', error));
+    </script>
+    <!-- Reposnsive -->
+    <script>
+        fetch('Responsive-menu.html')
+            .then(response => response.text())
+            .then(data => {
+                const menuContainer = document.getElementById('Responsive-menu-container'); // Replace with your desired ID
+                if (menuContainer) {
+                    menuContainer.insertAdjacentHTML('afterbegin', data); // Adds at start of div, keeps existing content
+                } else {
+                    console.log('Menu container not found');
+                }
+            })
+            .catch(error => console.log('Error loading menu:', error));
+    </script>
+
+    <!-- js for sort-by -->
+    <!-- <script>
+    const sortButton = document.getElementById('sortButton');
+    const sortDropdown = document.getElementById('sortDropdown');
+
+    sortButton.addEventListener('click', () => {
+        sortDropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!sortButton.contains(event.target) && !sortDropdown.contains(event.target)) {
+            sortDropdown.classList.add('hidden');
+        }
+    });
+</script> -->
+    <!-- js for default page -->
+    <script>
+        const defaultPageButton = document.getElementById('defaultPageButton');
+        const defaultPageDropdown = document.getElementById('defaultPageDropdown');
+
+        // Toggle dropdown on button click
+        defaultPageButton.addEventListener('click', () => {
+            defaultPageDropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!defaultPageButton.contains(event.target) && !defaultPageDropdown.contains(event.target)) {
+                defaultPageDropdown.classList.add('hidden');
+            }
+        });
+
+        // Update button text when an option is selected
+        const options = defaultPageDropdown.querySelectorAll('li');
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                defaultPageButton.querySelector('span').textContent = option.textContent;
+                defaultPageDropdown.classList.add('hidden');
+            });
+        });
+    </script>
+    <!-- js for search text area & sortby-options appear -->
+    <script>
+        // Sort Dropdown Logic
+        const sortButton = document.getElementById('sortButton');
+        const sortDropdown = document.getElementById('sortDropdown');
+        sortButton.addEventListener('click', () => {
+            sortDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (event) => {
+            if (!sortButton.contains(event.target) && !sortDropdown.contains(event.target)) {
+                sortDropdown.classList.add('hidden');
+            }
+        });
+
+        // Search Toggle Logic
+        const searchButton = document.getElementById('searchButton');
+        const searchTextarea = document.getElementById('searchTextarea');
+        const defaultContent = document.getElementById('defaultContent');
+
+        searchButton.addEventListener('click', () => {
+            defaultContent.classList.add('hidden');
+            searchTextarea.classList.remove('hidden');
+            searchTextarea.focus(); // Auto-focus the textarea
+        });
+
+        // Close textarea when clicking outside or pressing Enter
+        document.addEventListener('click', (event) => {
+            if (!searchTextarea.contains(event.target) && !searchButton.contains(event.target)) {
+                searchTextarea.classList.add('hidden');
+                defaultContent.classList.remove('hidden');
+            }
+        });
+
+        searchTextarea.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                searchTextarea.classList.add('hidden');
+                defaultContent.classList.remove('hidden');
+            }
+        });
+    </script>
+    <!-- Edit profile script -->
+    <script>
+        // Toggle Edit Profile Popup
+        const editProfileButton = document.getElementById('editProfileButton');
+        const editProfilePopup = document.getElementById('editProfilePopup');
+        const closePopupButton = document.getElementById('closePopupButton');
+
+        // Open Popup
+        editProfileButton.addEventListener('click', () => {
+            editProfilePopup.classList.remove('hidden');
+        });
+
+        // Close Popup (via X button)
+        closePopupButton.addEventListener('click', () => {
+            editProfilePopup.classList.add('hidden');
+        });
+
+        // Close Popup (click outside)
+        document.addEventListener('click', (event) => {
+            if (!editProfilePopup.contains(event.target) && !editProfileButton.contains(event.target)) {
+                editProfilePopup.classList.add('hidden');
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
