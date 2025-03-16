@@ -1,0 +1,722 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="font-['DM_Sans'] background1 h-full">
+    <div id="menu-container" class="flex h-full flex-col lg:flex-row">
+        <!-- Sidebar -->
+        <div class=" w-full">
+            <div class="p-4  w-full">
+                <header class="flex relative justify-between items-center py-6 pr-4 w-full max-md:max-w-full">
+                    <h1 class="z-0 self-stretch my-auto text-3xl font-bold tracking-tighter leading-none text-black">
+                        Live Counter
+                    </h1>
+
+                    <button class="flex z-0 gap-2 items-center self-stretch my-auto w-12">
+                        <div class="flex justify-center items-center self-stretch my-auto w-12 min-h-12 rounded-[48px]">
+                            <div
+                                class="flex gap-2 justify-center items-center self-stretch my-auto w-12 border border-solid border-black/5 border-opacity-10 min-h-12 rounded-[48px]">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3595c460fd46eb851b95a6e53f824de7d764f3a86555a22b6e02895e091272b7?placeholderIfAbsent=true&apiKey=16e3904c58664a39b7769f28d1ac1205"
+                                    alt="Search" class="object-contain self-stretch my-auto w-6 aspect-square" />
+                            </div>
+                        </div>
+                    </button>
+
+                    <nav class="flex absolute top-2/4 left-2/4 z-0 gap-4 items-start self-start whitespace-nowrap -translate-x-2/4 -translate-y-2/4 min-w-60"
+                        role="tablist">
+                        <button class="flex justify-center items-center min-h-12 rounded-[32px]" role="tab"
+                            aria-selected="true">
+                            <div
+                                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-black min-h-12 rounded-[32px]">
+                                <span class="z-0 my-auto text-base tracking-normal text-white">Tables</span>
+                                <span
+                                    class="absolute -top-3 -right-3 z-0 self-start px-2 w-8 h-8 text-sm font-bold leading-[32px] text-center text-black bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                                    16
+                                </span>
+                            </div>
+                        </button>
+
+                        <button class="flex justify-center items-center text-black min-h-12 rounded-[32px]" role="tab"
+                            aria-selected="false">
+                            <div
+                                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 min-h-12 rounded-[32px]">
+                                <span class="z-0 my-auto text-base tracking-normal">Delivery</span>
+                                <span
+                                    class="absolute -top-3 -right-3 z-0 self-start px-2 w-8 h-8 text-sm font-bold leading-[32px] text-center bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                                    3
+                                </span>
+                            </div>
+                        </button>
+
+                        <button class="flex justify-center items-center text-black min-h-12 rounded-[32px]" role="tab"
+                            aria-selected="false">
+                            <div
+                                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 min-h-12 rounded-[32px]">
+                                <span class="z-0 my-auto text-base tracking-normal">Pickup</span>
+                                <span
+                                    class="absolute -top-3 -right-3 z-0 self-start px-2 w-8 h-8 text-sm font-bold leading-[32px] text-center bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                                    2
+                                </span>
+                            </div>
+                        </button>
+
+                        <button class="flex justify-center items-center text-black min-h-12 rounded-[32px]" role="tab"
+                            aria-selected="false">
+                            <div
+                                class="flex relative gap-2 justify-center items-start self-stretch px-4 my-auto bg-white bg-opacity-60 min-h-12 rounded-[32px]">
+                                <span class="z-0 my-auto text-base tracking-normal">Aggregators</span>
+                                <span
+                                    class="absolute -top-3 -right-3 z-0 self-start px-2 w-8 h-8 text-sm font-bold leading-[32px] text-center bg-white rounded-2xl min-h-8 min-w-8 shadow-[0px_4px_16px_rgba(0,0,0,0.08)]">
+                                    11
+                                </span>
+                            </div>
+                        </button>
+                    </nav>
+                </header>
+
+                <section class="flex flex-wrap gap-10 justify-between items-start pr-4 pb-4 w-full max-md:max-w-full">
+                    <nav class="flex items-start text-sm font-bold leading-none text-center text-black bg-white bg-opacity-60 min-w-60 rounded-[48px]"
+                        role="tablist">
+                        <button
+                            class="flex-1 shrink self-stretch px-3 py-4 w-20 text-white bg-red-500 rounded-3xl basis-0 min-h-12 min-w-30"
+                            role="tab" aria-selected="true">
+                            All Table
+                        </button>
+                        <button class="flex-1 shrink self-stretch px-3 py-4 rounded-3xl basis-0 min-h-12 min-w-30 "
+                            role="tab" aria-selected="false">
+                            Main Hall
+                        </button>
+                        <button
+                            class="flex-1 shrink self-stretch px-3 py-4 w-20 whitespace-nowrap rounded-3xl basis-0 min-h-12 min-w-20"
+                            role="tab" aria-selected="false">
+                            Terrace
+                        </button>
+                        <button class="flex-1 shrink self-stretch px-3 py-4 rounded-3xl basis-0 min-h-12 min-w-30 "
+                            role="tab" aria-selected="false">
+                            River Side
+                        </button>
+                        <button class="flex-1 shrink self-stretch px-3 py-4 rounded-3xl basis-0 min-h-12 min-w-30 "
+                            role="tab" aria-selected="false">
+                            See View
+                        </button>
+                    </nav>
+
+                    <div class="flex flex-nowrap relative gap-2 items-center">
+                        <!-- Sort Container -->
+                        <div class="text-sm leading-none w-[113px] lg:w-[200px]">
+                            <button id="sortButton"
+                                class="flex gap-2 items-center py-2 pr-3 pl-5 w-full h-12 rounded-3xl bg-white bg-opacity-60 border border-1 border-black/10">
+                                <div class="flex flex-col flex-1 gap-1 justify-center items-start h-8">
+                                    <span class="w-full text-sm leading-4 text-black text-opacity-60">Sort by:</span>
+                                    <span
+                                        class="overflow-hidden w-full text-xs font-bold leading-4 text-black text-ellipsis">Table
+                                        No Ascending</span>
+                                </div>
+                                <img src="img/profile/down-arrow.png" alt="down-arrow" class="h-2 w-3 cursor-pointer">
+                            </button>
+                            <!-- Dropdown -->
+                            <div id="sortDropdown"
+                                class="hidden absolute top-14 left-0 w-full bg-white rounded-3xl shadow-lg shadow-black/10 z-20">
+                                <ul class="py-2 bg-white rounded-2xl">
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer border-b-1 border-black/10">
+                                        Table No Ascending</li>
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer border-b-1 border-black/10">
+                                        Order No Ascending</li>
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer border-b-1 border-black/10">
+                                        Occupied First</li>
+                                    <li
+                                        class="px-5 py-2 text-sm text-black hover:text-[rgba(255,86,52,1)] bg-white-100 cursor-pointer ">
+                                        Empty First</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Filter Button -->
+                        <button
+                            class="flex gap-2 justify-center items-center w-12 border border-solid border-black/5 border-opacity-10 min-h-12 rounded-[48px]">
+                            <img src="img/livecounter/grid.png" alt="Filter"
+                                class="object-contain self-stretch my-auto w-6 aspect-square" />
+                        </button>
+                    </div>
+                </section>
+
+                <main class="relative w-full max-md:max-w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pr-4">
+                        <!-- Table Card A1 -->
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-dashed border-red-400 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A1
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-black">Ordered</p>
+                                    <p class="text-black">14 min ago</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">1</span>
+                                    <img src="img/livecounter/doc.png" alt="Order"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Table Card A2 -->
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-dashed border-red-400 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A2
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">2</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-black">Ordered</p>
+                                    <p class="text-black">18 min ago</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">1</span>
+                                    <img src="img/livecounter/doc.png" alt="Order"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-dashed border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-dashed border-black bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #1975
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Guest</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-black">Ordered</p>
+                                    <p class="text-black/60">14 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4  border-black/20 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #1981
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Dianne Russell</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-black">Ordered</p>
+                                    <p class="text-black/60">10 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4  border-black/20 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #2011
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Jerome Bell</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-black">Ordered</p>
+                                    <p class="text-black/60">18 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-dashed border-black bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #1976
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Guest</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-black">Ordered</p>
+                                    <p class="text-black/60">22 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+                        <!-- Completed orders -->
+                        <article class="p-4 rounded-2xl  bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #1981
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Dianne Russell</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-red-500">cancelled</p>
+                                    <p class="text-black/60">10 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        <article class="p-4 rounded-2xl  bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #1981
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Dianne Russell</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+
+                                    <p class="text-black/60">10 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        <article class="p-4 rounded-2xl  bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #1981
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Dianne Russell</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+
+                                    <p class="text-black/60">10 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        <article class="p-4 rounded-2xl  bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        #1981
+                                    </h2>
+                                    <p class="text-sm leading-none text-black/60">Dianne Russell</p>
+                                </div>
+
+                            </div>
+                            <div class="flex gap-4 items-end mt-6 w-full">
+                                <div class="flex-1 text-sm leading-none">
+                                    <p class="text-red-500">cancelled</p>
+                                    <p class="text-black/60">10 min ago</p>
+                                </div>
+
+                            </div>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                        <article
+                            class="p-4 rounded-2xl border-l-4 border-green-700 bg-white bg-opacity-60 min-h-[136px]">
+                            <div class="flex gap-4 items-start w-full">
+                                <div class="flex-1">
+                                    <h2 class="text-2xl font-bold tracking-tight leading-none text-black">
+                                        A4
+                                    </h2>
+                                    <p class="text-sm leading-none text-black">River Side</p>
+                                </div>
+                                <div
+                                    class="flex gap-1 items-center text-base tracking-normal text-black whitespace-nowrap">
+                                    <span class="self-stretch my-auto">4</span>
+                                    <img src="img/livecounter/person.png" alt="People"
+                                        class="object-contain shrink-0 self-stretch my-auto w-4 h-4 ml-1 aspect-square" />
+                                </div>
+                            </div>
+                            <p class="mt-10 text-sm leading-none text-black">Free</p>
+                        </article>
+
+
+                    </div>
+
+                    <button
+                        class="flex absolute right-5 z-10 gap-2 justify-center items-center w-12 h-12 bg-black bottom-[83px] min-h-12 rounded-[48px] shadow-[0px_0px_84px_rgba(0,0,0,0.5)]"
+                        aria-label="Create Order">
+                        <img src="img/livecounter/plus.png" alt=""
+                            class="object-contain self-stretch my-auto w-4 aspect-square" />
+                    </button>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- sm and md screen navigarion bar bottom side -->
+    <div id="Responsive-menu-container">
+    </div>
+
+
+
+    <!-- Menu JS file -->
+    <script>
+        fetch('Desktop-menu.html')
+            .then(response => response.text())
+            .then(data => {
+                const menuContainer = document.getElementById('menu-container'); // Replace with your desired ID
+                if (menuContainer) {
+                    menuContainer.insertAdjacentHTML('afterbegin', data); // Adds at start of div, keeps existing content
+                } else {
+                    console.log('Menu container not found');
+                }
+            })
+            .catch(error => console.log('Error loading menu:', error));
+    </script>
+    <!-- Reposnsive -->
+    <script>
+        fetch('Responsive-menu.html')
+            .then(response => response.text())
+            .then(data => {
+                const menuContainer = document.getElementById('Responsive-menu-container'); // Replace with your desired ID
+                if (menuContainer) {
+                    menuContainer.insertAdjacentHTML('afterbegin', data); // Adds at start of div, keeps existing content
+                } else {
+                    console.log('Menu container not found');
+                }
+            })
+            .catch(error => console.log('Error loading menu:', error));
+    </script>
+    <!-- js for  sortby-options appear -->
+    <script>
+        // Sort Dropdown Logic
+        const sortButton = document.getElementById('sortButton');
+        const sortDropdown = document.getElementById('sortDropdown');
+        sortButton.addEventListener('click', () => {
+            sortDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (event) => {
+            if (!sortButton.contains(event.target) && !sortDropdown.contains(event.target)) {
+                sortDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

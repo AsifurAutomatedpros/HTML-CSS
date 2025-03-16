@@ -5,90 +5,192 @@
 }
 
 body {
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
     background-image: linear-gradient(to right, rgb(255, 239, 236), rgb(236, 236, 236));
     line-height: 1.6;
-    max-width: 100%;
+    min-height: 100vh;
 }
 
-
+/* Container */
 .container {
-    max-width: 73%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 20px;
-}
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
+/* Main Header */
+.mainHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 11px;
+}
+
+.logo3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ebe3e3;
+    object-fit: contain;
+    object-fit: cover;
+    padding: 8px;
+}
+
+.header-title {
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.fullscreen {
+    font-size: 0.9em;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.logo2 {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar */
+.leftbar {
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 10px;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 900;
+    transition: all 0.3s ease;
+}
+
+.icons {
+    display: flex
+;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+    border-radius: 36px;
+    background-color: #000;
+    justify-content: center;
+    width: fit-content;
+}
+
+.each-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #333;
+    object-fit: contain;
+    padding: 8px;
+    justify-content: center;
+}
+
+.profile-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+    border-radius: 36px;
+    background-color: white;
+    width: fit-content;
+}
+
+.p-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ebe3e3;
+    object-fit: contain;
+    padding: 8px;
+    justify-content: center;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    min-width: 0;
+}
 
 .header {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+    margin-bottom: 20px;
 }
 
 .brand {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
     align-items: center;
-    font-size: 18px;
+    gap: 10px;
+    font-size: 1.2em;
     font-weight: 600;
 }
 
-.brand-name {
-    margin-left: 8px;
-}
-
 .logo {
-    width: 50px;
-    height: auto;
+    width: 40px;
+    height: 40px;
 }
 
 .time {
     font-size: 1.2em;
     font-weight: 600;
-    text-align: end;
     color: #333;
 }
 
-
 .content {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
-
-
+    flex-wrap: wrap;
 }
-
-.preparing {
-    flex-grow: 2;
-
-}
-
-.ready {
-    flex-grow: 1;
-
-}
-
 
 .section {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
 
+.preparing {
+    flex: 2;
+}
 
+.ready {
+    flex: 1;
 }
 
 .section h2 {
@@ -98,37 +200,26 @@ body {
     text-align: center;
 }
 
-
 .grid {
     display: grid;
-    gap: 8px;
-
+    gap: 10px;
 }
 
 .preparing-grid {
-    grid-template-columns: repeat(6, 1fr);
-    
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 40px;
 }
 
 .ready-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
     grid-auto-rows: 40px;
-
-
 }
 
 .ready-grid button:first-child {
     grid-column: 1 / 4;
-
     grid-row: 1 / 3;
     max-height: 80px;
-
 }
-
-
-
 
 button {
     padding: 10px;
@@ -137,228 +228,93 @@ button {
     border-radius: 8px;
     cursor: pointer;
     background-color: #ccc;
-
-    min-width: 0;
-
-    min-height: 0;
-
-    max-height: 40px;
     font-weight: 600;
 }
 
 .ready button {
     background-color: #4CAF50;
-
     color: white;
 }
 
-
-/* sticky header  */
-
-.mainHeader {
-    display: flex;
-    font-size: 1.5em;
-    font-weight: 600;
-    max-width: 100%;
-    
-    gap: 20px;
-    
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
-
-}
-.mainHeader span {
-    width: 30%;
-}
-.logo3 {
-    width: 90px;
-    height: 75px;
-    border-radius: 50%; 
-    background-color: #ebe3e3;
-    object-fit: none;
-    display: block;
-    margin: 0 auto;
-}
-.fullscreen {
-  
-    text-align: right;
-    font-size: 0.6em;
-   align-items: right;
-   justify-items: center;
-   width: 90%;
-   cursor: pointer;
-   
-
-}
-.btn {
-    border: solid 1px #ddd;
-    padding: 5px;
-    border-radius: 10px;
-}
-.logo2 {
-    max-height: 12px;
-    max-width: 12px;
-    margin-right: 5px;
-}
-.fullscreen img {
-    justify-items: center;
-}
-
-/*sticky sidebar*/
-
-.leftbar {
-    width: 64px; 
-    background-color: rgba(255, 255, 255, 0.0);
-    padding: 10px 0;
-    border-radius: 0 10px 10px 0; 
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.0);
-    position: fixed; 
-    top: 65px; 
-    
-    height: calc(100vh - 65px); /* Full viewport height minus header */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 900; /* Below header but above content */
-    justify-content: center;
-    align-content: center;
-    
-}
-.icons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 5px; 
-    border: solid 1px #ddd;
-    justify-items: center;
-    border-radius: 36px;
-    background-color: black;
-}
-
-.each-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; 
-    background-color: #333;
-    object-fit: none;
-    display: block;
-    margin: 0 auto; 
-}
-
-/* Profile Icon Section */
-.profile-icon {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 5px;
-    width: 64px;
-    position: fixed;
-    bottom: 50px;
-    border: solid 1px #ddd;
-    justify-items: center;
-    border-radius: 36px;
-    background-color: white;
-}
-
-.p-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; 
-    background-color: #ebe3e3;
-    object-fit: none;
-    display: block;
-    margin: 0 auto; 
-}
-
-
-
-
-
-
-
-/* Responsive design */
-
-/* Media Queries for Mobile */
-
-@media (max-width: 1400px) {
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
     .container {
-        padding: 10px;
-        max-width: 100%;
+        padding: 15px;
     }
+
     .leftbar {
-        position: static; 
-        width: 100%; 
-        height: auto; 
-        flex-direction: row; 
+        width: 70px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .preparing-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .ready-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .leftbar {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
         justify-content: space-between;
         padding: 10px;
-        border-radius: 10px;
-        background-color: #fff; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.9);
         margin-bottom: 20px;
-        margin-top: 10px;
     }
+
     .icons {
-        flex-direction: row; 
-        width: auto;
-        background-color: transparent; 
-        border: none; 
-        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        border: none;
+        gap: 10px;
     }
 
     .profile-icon {
-        flex-direction: row; 
-        position: static; 
-        width: auto;
+        flex-direction: row;
+        background-color: transparent;
         border: none;
-        padding: 0;
+        gap: 10px;
     }
 
+    .each-icon, .p-icon {
+        width: 35px;
+        height: 35px;
+    }
 
+    .preparing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+
 @media (max-width: 768px) {
     .container {
         padding: 10px;
-        max-width: 100%;
     }
 
-    .wrapper {
-        flex-direction: column; 
-    }
-
-    .leftbar {
-        position: static; 
-        width: 100%; 
-        height: auto; 
-        flex-direction: row; 
-        justify-content: space-between;
+    .mainHeader {
         padding: 10px;
-        border-radius: 10px;
-        background-color: #fff; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        margin-top: 10px;
     }
 
-    .icons {
-        flex-direction: row; 
-        width: auto;
-        background-color: transparent; 
-        border: none; 
-        padding: 0;
+    .logo3 {
+        width: 50px;
+        height: 50px;
     }
 
-    .profile-icon {
-        flex-direction: row; 
-        position: static; 
-        width: auto;
-        border: none;
-        padding: 0;
+    .header-title {
+        font-size: 1.2em;
     }
 
     .each-icon, .p-icon {
@@ -366,46 +322,20 @@ button {
         height: 30px;
     }
 
-    .main-content {
-        padding: 10px;
-    }
-
-    .header {
-        grid-template-columns: 1fr 1fr;
-        font-size: 16px;
-    }
-
-    .brand {
-        font-size: 16px;
-    }
-
-    .time {
-        text-align: right;
-        font-size: 16px;
-    }
-
     .content {
         flex-direction: column;
     }
 
     .preparing-grid {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 
-   
+    .ready-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     button {
-        font-size: 0.7em;
-        padding: 5px;
-    }
-    .mainHeader{
-        font-size: 1em;
-    }
-    .logo3{
-        height: auto;
-        width: auto;
-    }
-    .mainHeader span {
-        width: 60%;
+        font-size: 0.9em;
+        padding: 8px;
     }
 }

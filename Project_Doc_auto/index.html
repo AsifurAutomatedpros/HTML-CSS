@@ -1,0 +1,199 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        pre { white-space: pre-wrap; font-size: 14px; }
+        textarea { width: 100%; height: 200px; }
+    </style>
+</head>
+<body>
+    <h1>AutomatedPro Project Automation Doc Preparation</h1>
+    <textarea id="response">Response to be shown here</textarea>
+
+    <script>
+        const FIGMA_TOKEN = 'figd_sCejA_JPxuF9PBD0tuE-HxEhA4wiqUXhF3yODg4Y';
+        const FILE_KEY = 'LuRSEJzeTyKZ2enSjQ8wWv';
+        const HF_READ_TOKEN = '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';
+
+        async function getFigmaData() {
+            const textarea = document.getElementById('response');
+            textarea.value = 'Fetching Figma file data...\n';
+            try {
+                const response = await axios.get(`https://api.figma.com/v1/files/${FILE_KEY}`, {
+                    headers: { 'X-Figma-Token': FIGMA_TOKEN }
+                });
+                console.log('Figma data fetched:', response.data);
+                textarea.value += 'Figma file data received successfully.\n';
+                return response.data;
+            } catch (error) {
+                console.error('Figma API error:', error.response ? error.response.data : error.message);
+                textarea.value += 'Error fetching Figma data: ' + (error.response ? error.response.data.message : error.message) + '\n';
+                throw error;
+            }
+        }
+
+        async function processWithHuggingFace(figmaChunk, promptType) {
+            const textarea = document.getElementById('response');
+            let prompt;
+            switch (promptType) {
+                case 'endpoints':
+                    prompt = `Given this Figma screen JSON, identify potential API endpoints. Return a list of endpoints with their actions (e.g., GET, POST) and elements involved. Format as: Action, Element, Endpoint.\n${JSON.stringify(figmaChunk, null, 2)}`;
+                    break;
+                case 'interfaces':
+                    prompt = `Given this Figma screen JSON, describe the interface elements (e.g., buttons, text fields). Format as: Element, Description.\n${JSON.stringify(figmaChunk, null, 2)}`;
+                    break;
+                case 'interactions':
+                    prompt = `Given this Figma screen JSON, describe user interactions (e.g., click, hover). Format as: Action, Element, AfterAction.\n${JSON.stringify(figmaChunk, null, 2)}`;
+                    break;
+                case 'features':
+                    prompt = `Given this Figma screen JSON, identify key features of the screen. Format as: Feature, Description.\n${JSON.stringify(figmaChunk, null, 2)}`;
+                    break;
+                default:
+                    prompt = `Analyze this Figma screen JSON:\n${JSON.stringify(figmaChunk, null, 2)}`;
+            }
+
+            const maxPromptLength = 1000;
+            const truncatedPrompt = prompt.length > maxPromptLength ? prompt.substring(0, maxPromptLength) + '...' : prompt;
+
+            textarea.value += `Sending ${promptType} data to Hugging Face for node ${figmaChunk.name}...\n`;
+            try {
+                const response = await axios.post(
+                    'https://api-inference.huggingface.co/models/google/flan-t5-base',
+                    { inputs: truncatedPrompt },
+                    { headers: { Authorization: `Bearer ${HF_READ_TOKEN}` } }
+                );
+                textarea.value += `Sending ${promptType} data to Hugging Face completed.\n`;
+                console.log(`Hugging Face ${promptType} response:`, response.data);
+                textarea.value += `Getting ${promptType} response from Hugging Face...\n`;
+                const result = response.data[0]?.generated_text || 'No response generated for this section.';
+                textarea.value += `${promptType.charAt(0).toUpperCase() + promptType.slice(1)} response received: ${result.substring(0, 50)}${result.length > 50 ? '...' : ''}\n`;
+                return result;
+            } catch (error) {
+                console.error(`Hugging Face ${promptType} error:`, error.response ? error.response.data : error.message);
+                textarea.value += `Error with Hugging Face ${promptType}: ${error.response ? error.response.data : error.message}\n`;
+                return `Error processing ${promptType}: ${error.response ? error.response.data : error.message}`;
+            }
+        }
+
+        function escapeCsvValue(value) {
+            if (typeof value !== 'string') value = String(value);
+            if (value.includes(',') || value.includes('"') || value.includes('\n')) {
+                value = `"${value.replace(/"/g, '""')}"`;
+            }
+            return value;
+        }
+
+        function parseHuggingFaceResponse(responseText, promptType) {
+            const lines = responseText.split('\n').filter(line => line.trim());
+            const parsedData = [];
+
+            lines.forEach(line => {
+                const parts = line.split(',').map(part => part.trim());
+                if (parts.length >= 2) {
+                    if (promptType === 'endpoints' && parts.length >= 3) {
+                        parsedData.push({ action: parts[0], element: parts[1], endpoint: parts[2] });
+                    } else if (promptType === 'interfaces' || promptType === 'features') {
+                        parsedData.push({ element: parts[0], description: parts[1] });
+                    } else if (promptType === 'interactions' && parts.length >= 3) {
+                        parsedData.push({ action: parts[0], element: parts[1], afterAction: parts[2] });
+                    }
+                }
+            });
+
+            return parsedData;
+        }
+
+        function downloadCsv(data) {
+            const csvContent = data.map(section => [
+                section.header,
+                ...section.rows.map(row => row.map(escapeCsvValue).join(','))
+            ]).flat().join('\n');
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `project_doc_${new Date().toISOString().split('T')[0]}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+        async function run() {
+            const textarea = document.getElementById('response');
+            textarea.value = 'Starting process...\n';
+
+            try {
+                const figmaData = await getFigmaData();
+                const csvData = [
+                    { header: 'Endpoints,Component,Module,Section,Interface,Action,Element,Sr. No (1),AfterAction_Screen (1),AfterAction_Screen_Sr.No (2),AfterAction_Screen (3)', rows: [] },
+                    { header: 'Interfaces,Component,Module,Section,Interface,Element,Description', rows: [] },
+                    { header: 'Interactions,Component,Module,Section,Interface,Action,Element,AfterAction', rows: [] },
+                    { header: 'Features,Component,Module,Section,Interface,Feature,Description', rows: [] }
+                ];
+
+                if (figmaData.document && figmaData.document.children) {
+                    for (let canvasIndex = 0; canvasIndex < figmaData.document.children.length; canvasIndex++) {
+                        const canvas = figmaData.document.children[canvasIndex];
+                        textarea.value += `Processing canvas ${canvasIndex + 1} of ${figmaData.document.children.length}: ${canvas.name}\n`;
+
+                        if (canvas.children) {
+                            for (let screenIndex = 0; screenIndex < canvas.children.length; screenIndex++) {
+                                const screen = canvas.children[screenIndex];
+                                textarea.value += `Processing screen ${screenIndex + 1} of ${canvas.children.length} under ${canvas.name}: ${screen.name}\n`;
+
+                                // Process each category
+                                const categories = ['endpoints', 'interfaces', 'interactions', 'features'];
+                                for (const category of categories) {
+                                    const response = await processWithHuggingFace(screen, category);
+                                    const parsedData = parseHuggingFaceResponse(response, category);
+
+                                    parsedData.forEach(data => {
+                                        const row = [];
+                                        if (category === 'endpoints') {
+                                            row.push('', // Placeholder for Component (fill later if needed)
+                                                '', // Module
+                                                canvas.name, // Section
+                                                screen.name, // Interface
+                                                data.action, // Action
+                                                data.element, // Element
+                                                '', '', '', ''); // Sr. No (1), AfterAction_Screen (1), etc.
+                                            csvData[0].rows.push(row);
+                                        } else if (category === 'interfaces') {
+                                            row.push('', '', canvas.name, screen.name, data.element, data.description);
+                                            csvData[1].rows.push(row);
+                                        } else if (category === 'interactions') {
+                                            row.push('', '', canvas.name, screen.name, data.action, data.element, data.afterAction);
+                                            csvData[2].rows.push(row);
+                                        } else if (category === 'features') {
+                                            row.push('', '', canvas.name, screen.name, data.element, data.description);
+                                            csvData[3].rows.push(row);
+                                        }
+                                    });
+
+                                    await new Promise(resolve => setTimeout(resolve, 1000)); // Rate limit delay
+                                }
+
+                                textarea.value += `Screen ${screenIndex + 1} under ${canvas.name} processed successfully.\n`;
+                            }
+                        }
+                    }
+                } else {
+                    textarea.value += 'No sections found in Figma document.\n';
+                    csvData.forEach(section => section.rows.push(['', '', '', '', '', '', '', '', '', 'No sections found in Figma document.']));
+                }
+
+                textarea.value += 'All canvases and screens processed. Preparing CSV...\n';
+                downloadCsv(csvData);
+                textarea.value += 'CSV ready and downloading...\n';
+            } catch (error) {
+                textarea.value += 'Error: ' + error.message + '\n';
+            }
+            textarea.value += 'Process completed.\n';
+        }
+
+        run();
+    </script>
+</body>
+</html>
