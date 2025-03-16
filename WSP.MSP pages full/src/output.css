@@ -354,8 +354,20 @@
   .bottom-3 {
     bottom: calc(var(--spacing) * 3);
   }
+  .bottom-\[10vh\] {
+    bottom: 10vh;
+  }
+  .bottom-\[15vh\] {
+    bottom: 15vh;
+  }
   .bottom-\[83px\] {
     bottom: 83px;
+  }
+  .bottom-\[90vh\] {
+    bottom: 90vh;
+  }
+  .bottom-\[100px\] {
+    bottom: 100px;
   }
   .-left-3 {
     left: calc(var(--spacing) * -3);
@@ -516,6 +528,9 @@
       max-width: 96rem !important;
     }
   }
+  .m-\[4px\] {
+    margin: 4px;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -560,6 +575,9 @@
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-\[20px\] {
+    margin-top: 20px;
   }
   .mt-auto {
     margin-top: auto;
@@ -738,11 +756,20 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
+  .h-13 {
+    height: calc(var(--spacing) * 13);
+  }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-25 {
+    height: calc(var(--spacing) * 25);
   }
   .h-\[14px\] {
     height: 14px;
@@ -948,6 +975,9 @@
   .w-\[60px\] {
     width: 60px;
   }
+  .w-\[70px\] {
+    width: 70px;
+  }
   .w-\[82px\] {
     width: 82px;
   }
@@ -978,6 +1008,9 @@
   .w-\[143px\] {
     width: 143px;
   }
+  .w-\[150px\] {
+    width: 150px;
+  }
   .w-\[163px\] {
     width: 163px;
   }
@@ -986,6 +1019,12 @@
   }
   .w-\[223px\] {
     width: 223px;
+  }
+  .w-\[250px\] {
+    width: 250px;
+  }
+  .w-\[300px\] {
+    width: 300px;
   }
   .w-\[315px\] {
     width: 315px;
@@ -2007,6 +2046,9 @@
   .bg-\[\#ccc\] {
     background-color: #ccc;
   }
+  .bg-\[\#f5f5f5\] {
+    background-color: #f5f5f5;
+  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
@@ -2278,6 +2320,9 @@
   .p-\[10px\] {
     padding: 10px;
   }
+  .p-\[15px\] {
+    padding: 15px;
+  }
   .p-\[20px\] {
     padding: 20px;
   }
@@ -2338,6 +2383,9 @@
   .pt-0 {
     padding-top: calc(var(--spacing) * 0);
   }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
@@ -2385,6 +2433,9 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
   }
   .pb-7 {
     padding-bottom: calc(var(--spacing) * 7);
@@ -2661,6 +2712,9 @@
   }
   .text-\[\#333\] {
     color: #333;
+  }
+  .text-\[\#585757\] {
+    color: #585757;
   }
   .text-black {
     color: var(--color-black);
@@ -3496,6 +3550,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .sm\:grid-cols-4 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .sm\:flex-col {
     @media (width >= 40rem) {
       flex-direction: column;
@@ -3622,6 +3681,11 @@
       flex: 2;
     }
   }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .md\:grid-cols-5 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -3730,6 +3794,11 @@
       position: static;
     }
   }
+  .lg\:bottom-\[83px\] {
+    @media (width >= 64rem) {
+      bottom: 83px;
+    }
+  }
   .lg\:mb-5 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 5);
@@ -3805,6 +3874,11 @@
       width: 200px;
     }
   }
+  .lg\:w-\[250px\] {
+    @media (width >= 64rem) {
+      width: 250px;
+    }
+  }
   .lg\:w-auto {
     @media (width >= 64rem) {
       width: auto;
@@ -3823,6 +3897,11 @@
   .lg\:max-w-full {
     @media (width >= 64rem) {
       max-width: 100%;
+    }
+  }
+  .lg\:min-w-30 {
+    @media (width >= 64rem) {
+      min-width: calc(var(--spacing) * 30);
     }
   }
   .lg\:grid-cols-2 {
@@ -3903,6 +3982,16 @@
   .lg\:p-\[20px\] {
     @media (width >= 64rem) {
       padding: 20px;
+    }
+  }
+  .lg\:px-3 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+  .lg\:px-4 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 4);
     }
   }
   .lg\:text-\[1\.2em\] {
