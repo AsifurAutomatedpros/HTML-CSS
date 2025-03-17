@@ -1,32 +1,79 @@
 @import "tailwindcss";
 
-
-@media (max-width: 639px) {
-  .leftbar {
-    position: static; 
-    width: 100%; 
-    height: auto; 
-    flex-direction: row; 
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #fff; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-.each-icon {
-
-width:30px;
-height: 30px;
+.bg-gradient-custom {
+     background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
+    
 }
 
- .p-icon{
-  width:30px;
-height: 30px;
- }
- button {
-  font-size: 0.7em;
-  padding: 5px;
+#remember-me:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 10px;
 }
+
+.bg-red-500{
+
+    background-color: rgba(255, 86, 52, 1)
 }
+
+.background1{
+    background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
+
+}
+.bg2 {
+    background: rgba(225, 14, 14, 1);
+}
+.bg3 {
+    background: rgba(255, 86, 52, 1);
+}
+.color-semitransparent{
+color: rgba(255, 86, 52, 1);
+}
+
+/* for add new order page */
+
+
+.selected-items-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+  
+  .selected-items-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .selected-items-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .selected-items-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+  
+
+  /* for sign in page */
+
+   
+
+    .wrong-code {
+        background-color: #e0e0e0;
+        border: 2px solid #ef4444;
+        color: #ef4444;
+    }
+
+    /* Style for empty field warnings */
+    #email-empty-warning,
+    #password-empty-warning {
+        display: none;
+    }
+
+    /*  Profile page  */
+
+    .hover-orange {
+        color: rgba(255, 86, 52, 1);
+    }

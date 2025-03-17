@@ -257,9 +257,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-\[35px\] {
     height: 35px;
   }
@@ -268,9 +265,6 @@
   }
   .h-\[150px\] {
     height: 150px;
-  }
-  .w-\[30\%\] {
-    width: 30%;
   }
   .w-\[35px\] {
     width: 35px;
@@ -287,14 +281,8 @@
   .w-\[300px\] {
     width: 300px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -325,10 +313,6 @@
   }
   .rounded-\[50\%\] {
     border-radius: 50%;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-\[1px\] {
     border-style: var(--tw-border-style);
@@ -381,20 +365,11 @@
   .p-\[25px\] {
     padding: 25px;
   }
-  .p-\[48px\] {
-    padding: 48px;
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
-  .px-21 {
-    padding-inline: calc(var(--spacing) * 21);
-  }
   .px-21\.75 {
     padding-inline: calc(var(--spacing) * 21.75);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
   }
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
@@ -476,10 +451,6 @@
   .underline {
     text-decoration-line: underline;
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .hover\:bg-\[\#e0e0e0\] {
     &:hover {
       @media (hover: hover) {
@@ -487,19 +458,9 @@
       }
     }
   }
-  .sm\:p-\[10\] {
-    @media (width >= 40rem) {
-      padding: 10;
-    }
-  }
   .sm\:p-\[10px\] {
     @media (width >= 40rem) {
       padding: 10px;
-    }
-  }
-  .sm\:p-\[18px\] {
-    @media (width >= 40rem) {
-      padding: 18px;
     }
   }
   .sm\:p-\[28px\] {
@@ -510,16 +471,6 @@
   .md\:w-\[30\%\] {
     @media (width >= 48rem) {
       width: 30%;
-    }
-  }
-  .md\:w-\[100\%\] {
-    @media (width >= 48rem) {
-      width: 100%;
-    }
-  }
-  .md\:p-\[10px\] {
-    @media (width >= 48rem) {
-      padding: 10px;
     }
   }
   .md\:p-\[48px\] {
@@ -545,9 +496,4 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
