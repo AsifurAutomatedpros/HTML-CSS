@@ -8,26 +8,29 @@ body {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: rgba(255, 255, 255, 1);
+     background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
+
     width: 100vw;
     height: 100vh;
 }
 
 .main-container {
-    max-width: 90vw;
+    max-width: 80vw;
     margin: 0 auto;
     padding: 20px;
     height: 100vh;
+    overflow: hidden;
 }
 
 .table-container {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 .table-row {
     display: grid;
-    grid-template-columns: 1.2fr 1.8fr;
+    grid-template-columns: 1fr 2fr;
     
     gap: 0;
     border-radius: 30px;
@@ -45,6 +48,8 @@ body {
     padding: 40px;
     border-radius: 30px;
     background-color: #ff5524; 
+    overflow: hidden;
+    width: 480px;
 }
 
 .parent-imgsec::before {
@@ -53,7 +58,7 @@ body {
     border-radius: 30px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 480px;
     height: 100%;
     background: rgba(255, 86, 52, 0.5); 
     z-index: 1; 
@@ -75,23 +80,23 @@ body {
 }
 
 .text-title {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
    
-    margin-top: 90%;
+    margin-top: 140%;
    
 
 }
 
 .text {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 20px;
     color: rgba(255, 255, 255, 1);
 
 }
 
 .parent-form {
-    background-color: rgba(255, 255, 255, 1);
+    
     padding: 40px;
     align-content: center;
     color: rgba(255, 255, 255, 1);
@@ -101,12 +106,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 360px;
+    margin-left: 129px;
 }
 
 .right-side h3 {
-    font-size: 1.8rem;
+    font-size: 32px;
     font-weight: 700;
     color: #1A1A1A;
     text-align: center;
@@ -115,14 +120,14 @@ body {
 .subtitle {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-align: center;
 }
 
 .right-side label {
-    font-size: 13px;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     display: block;
     font-weight: 700;
 }
@@ -135,8 +140,9 @@ body {
     border-radius: 25px;
     font-size: 1rem;
     background-color: #F9F9F9;
-    margin-bottom: 15px;
-    margin-top: -11px;
+    margin-bottom: 16px;
+    margin-top: 0px;
+    
 }
 
 .password-container {
@@ -146,7 +152,7 @@ body {
 .eye-icon {
     position: absolute;
     right: 15px;
-    top: 25%;
+    top: 23px;
     transform: translateY(-50%);
 
     color: #666;
@@ -155,9 +161,10 @@ body {
 .form-options {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 0.9rem;
+    /* align-items: center; */
+    margin-bottom: 14px;
+    font-size: 16px;
+    margin-top: 14px;
 }
 
 .form-options label {
@@ -170,6 +177,8 @@ body {
 .form-options a {
     color: rgba(0, 0, 0, 1);
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .Remember {
@@ -190,21 +199,26 @@ body {
 }
 
 .right-side button {
-    background-color: #1A1A1A;
-    color: white;
-    padding: 12px;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    padding-left: 32px;
+    padding-right: 32px;
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: center;
     width: 100%;
+    margin-top: 16px;
+    height: 48px;
 }
 
 .right-side button:hover {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.4);
 }
 .logo2{
     display: none;
@@ -220,9 +234,11 @@ body {
 @media (max-width: 1024px) {
     .main-container {
         max-width: 100vw;
-        padding: 100px;
+        
         background: linear-gradient(33.85deg, #FDE8E4 37.88%, #ECECEC 73.61%);
         height: 100vh;
+        padding-left: 48px;
+        padding-right: 48px;
          
     }
 
@@ -288,7 +304,7 @@ body {
         left: 50%; 
         transform: translateX(-50%); 
         grid-template-columns: 1fr;
-        margin-top: 72px;
+        margin-top: 58px;
     }
 
     .text-title {
@@ -313,8 +329,9 @@ body {
     }
 
     .right-side {
-        max-width: 100%; 
+        max-width: 360px; 
         padding: 0 10px; 
+        margin-left: 0px;
     }
 
     .right-side h3 {
@@ -335,13 +352,21 @@ body {
         padding: 10px; 
         font-size: 0.9rem; 
     }
+    .eye-icon {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        transform: translateY(-50%);
+    
+        color: #666;
+    }
 }
 
 /* Media Query for Very Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
     .main-container {
         max-width: 100vw;
-        padding: 20px;
+        padding: 16px;
         background: linear-gradient(33.85deg, #FDE8E4 37.88%, #ECECEC 73.61%);
     }
 
