@@ -362,6 +362,18 @@
     border-style: var(--tw-border-style);
     border-width: 4px;
   }
+  .border-6 {
+    border-style: var(--tw-border-style);
+    border-width: 6px;
+  }
+  .border-8 {
+    border-style: var(--tw-border-style);
+    border-width: 8px;
+  }
+  .border-10 {
+    border-style: var(--tw-border-style);
+    border-width: 10px;
+  }
   .border-\[1px\] {
     border-style: var(--tw-border-style);
     border-width: 1px;
