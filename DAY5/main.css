@@ -315,7 +315,7 @@ body {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 55%;
+        width: 65%;
     }
 
     .right-side {
@@ -362,7 +362,7 @@ body {
     }
 
     .parent-form {
-        width: 90%;
+        width: 100%;
     }
 
     .logo2 {
