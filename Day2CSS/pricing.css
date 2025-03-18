@@ -137,7 +137,7 @@ header {
 }
 
 .header-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -187,13 +187,18 @@ nav a {
 
 /* Pricing Plans */
 .pricing-plans {
-    max-width: 1200px;
-    margin: 0 auto;
-    /* padding: 20px; */
-    display: flex;
-    gap: 0px 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0px 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: start;
+  translate: none;
+    rotate: none;
+    scale: none;
+    opacity: 1;
+    transform: translate(0px, 0px);
 }
 .price-icon {
     height: 48px; 
@@ -204,15 +209,13 @@ nav a {
 }
 
 .plan {
-    background-color: #fff;
-    border: 1px solid #EDEDED;
-    border-radius: 24px;
-    padding: 30px;
-    width: 100%;
-    max-width: 465px;
-    text-align: center;
-    box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
-    
+  background-color: #fff;
+  border: 1px solid #EDEDED;
+  border-radius: 24px;
+  padding: 30px;
+  max-width: 562px; 
+  text-align: center;
+  box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
 }
 
 .plan h3 {
@@ -336,7 +339,7 @@ nav a {
     z-index: 30;
     position: absolute;
     margin-top: -75px;
-    margin-left: -1004px;
+    margin-left: -1280px;
 }
 .article {
     font-size: 16px;
@@ -394,88 +397,41 @@ nav a {
 }
 
 
-
 @media (max-width: 1024px) {
-
   .plan {
-    background-color: #fff;
-    border: 1px solid #EDEDED;
-    border-radius: 24px;
-    padding: 30px;
-    width: 40%;
-    max-width: 100%;
-    text-align: center;
-    box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
-    
+      padding: 30px;
+      max-width: 625px; /* Keep this unless you want full width */
+      width: 40%; /* This is fine, but max-width will cap it */
   }
   .plan button {
-    background-color: #FF5634;;
-    color: white;
-    border: none;
-    padding: 25px 60px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 18px;
-    
-    
+      padding: 25px 60px;
+      width: 50%; /* Optional: adjust button width */
   }
-  .batch{
-    max-width: 110px;
-    max-height: 110px;
-    z-index: 30;
-    position: absolute;
-    margin-top: -38px;
-    margin-left: -6px;
+  .batch {
+      max-width: 110px;
+      max-height: 110px;
+      margin-top: -38px;
+      margin-left: -6px;
+  }
 }
-
-}
-
 @media (max-width: 780px) {
-
-  .batch{
-    max-width: 90px;
-    max-height: 90px;
-    z-index: 30;
-    position: absolute;
-    margin-top: -38px;
-    margin-left: -13px;
-}
-
-
-.pricing-header h2 {
-  font-size: 40px;
-  color: #333;
-  margin-bottom: 10px;
-  font-weight: 800;
-  line-height: 45px;
-}
-.plan {
-  background-color: #fff;
-  border: 1px solid #EDEDED;
-  border-radius: 24px;
-  padding: 30px;
-  width: 100%;
-  max-width: 100%;
-  text-align: center;
-  box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
-  
-}
-.plan button {
-  background-color: #FF5634;;
-  color: white;
-  border: none;
-  padding: 20px 55px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 20px;
-  font-weight: 700;
-  line-height: 18px;
-  
-  
-}
-
+  .plan {
+      padding: 30px;
+      max-width: 625px; /* Keep this unless full width is desired */
+      width: 100%; /* Full width at small screens, capped by parent */
+  }
+  .plan button {
+      padding: 20px 55px;
+      width: 50%; /* Optional: adjust button width */
+  }
+  .batch {
+      max-width: 90px;
+      max-height: 90px;
+      margin-top: -38px;
+      margin-left: -13px;
+  }
+  .pricing-header h2 {
+      font-size: 40px;
+      line-height: 45px;
+  }
 }
