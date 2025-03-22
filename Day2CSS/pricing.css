@@ -207,6 +207,12 @@ nav a {
     margin-right: 10px; 
     margin-left: 10px;
 }
+.plan-flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
 
 .plan {
   background-color: #fff;
@@ -408,10 +414,10 @@ nav a {
       width: 50%; /* Optional: adjust button width */
   }
   .batch {
-      max-width: 110px;
-      max-height: 110px;
+      max-width: 90px;
+      max-height: 90px;
       margin-top: -38px;
-      margin-left: -6px;
+      margin-left: -802px;
   }
 }
 @media (max-width: 780px) {
@@ -428,7 +434,7 @@ nav a {
       max-width: 90px;
       max-height: 90px;
       margin-top: -38px;
-      margin-left: -13px;
+      margin-left: -290px;
   }
   .pricing-header h2 {
       font-size: 40px;
