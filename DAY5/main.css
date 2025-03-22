@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -11,37 +10,32 @@ body {
     font-style: normal;
     background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
     width: 100%;
-    min-height: 100vh; 
-    overflow-x: hidden; 
+    min-height: 100vh;
+    overflow-x: hidden;
     display: flex;
-    justify-content: center; 
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .main-container {
-    margin: 0 auto;
     padding: 20px;
-    width: 80%;
-    max-width: 1220px;
-    min-height: 90vh; 
-    overflow-y: auto; 
-    box-sizing: border-box;
-    /* background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);  */
 }
 
 .table-container {
     width: 100%;
-    min-height: 100%; 
-    overflow: hidden; 
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .table-row {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.6fr 2fr;
     gap: 0;
     border-radius: 30px;
     grid-template-rows: auto;
-    min-height: 0; 
-    overflow: auto; 
+    min-height: 0;
+    overflow: auto;
 }
 
 .parent-imgsec {
@@ -53,7 +47,7 @@ body {
     background-color: #ff5524;
     width: 480px;
     max-width: 100%;
-    min-height: 300px; 
+    min-height: 300px;
 }
 
 .parent-imgsec::before {
@@ -74,7 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     color: rgba(255, 255, 255, 1);
-    min-height: 100%; 
+    min-height: 100%;
 }
 
 .logo {
@@ -98,7 +92,12 @@ body {
     padding-right: 40px;
     align-content: center;
     color: rgba(255, 255, 255, 1);
-    min-height: 100%; 
+    min-height: 100%;
+    justify-content: center;
+    width: 100%;
+    display: flex; /* or any layout that puts children side by side */
+    flex-direction: row;
+    align-items: center;
 }
 
 .right-side {
@@ -106,7 +105,7 @@ body {
     flex-direction: column;
     gap: 8px;
     max-width: 360px;
-    margin-left: 129px;
+    
 }
 
 .right-side h3 {
@@ -189,7 +188,7 @@ body {
     height: 28px;
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    position: relative; 
+    position: relative;
 }
 
 .form-options a:hover {
@@ -229,10 +228,10 @@ body {
 
 /* cehck box */
 .right-side input[type="checkbox"]:checked::after {
-    content: '✔'; 
+    content: '✔';
     position: absolute;
-    left: 8px; 
-    top: 4px;  
+    left: 8px;
+    top: 4px;
     font-size: 16px;
     color: #000;
 }
@@ -327,7 +326,7 @@ body {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 61%;
+        /* width: 61%; */
     }
 
     .right-side {
