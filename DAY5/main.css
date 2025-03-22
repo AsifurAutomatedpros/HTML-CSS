@@ -122,7 +122,7 @@ body {
     text-align: center;
 }
 
-.right-side label {
+.label1 {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 8px;
@@ -179,6 +179,9 @@ body {
 
 .Remember {
     color: rgba(0, 0, 0, 1);
+    padding-left: 0px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .right-side input[type="checkbox"] {
