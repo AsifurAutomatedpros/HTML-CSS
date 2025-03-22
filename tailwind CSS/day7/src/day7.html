@@ -235,10 +235,10 @@
         if (window.scrollY > 0) {
             // Remove transparent, add semi-transparent white
             element.classList.remove('bg-transparent');
-            element.classList.add('bg-[rgba(255,255,255,0.5)]', 'rounded-2xl');
+            element.classList.add('bg-[rgba(255,255,255,1)]', 'rounded-2xl');
         } else {
             // Remove semi-transparent white, add transparent
-            element.classList.remove('bg-[rgba(255,255,255,0.5)]', 'rounded-2xl');
+            element.classList.remove('bg-[rgba(255,255,255,1)]', 'rounded-2xl');
             element.classList.add('bg-transparent');
         }
     });
