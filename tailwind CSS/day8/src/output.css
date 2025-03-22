@@ -9,8 +9,6 @@
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-gray-100: oklch(0.967 0.003 264.542);
     --color-gray-300: oklch(0.872 0.01 258.338);
-    --color-gray-500: oklch(0.551 0.027 264.364);
-    --color-gray-700: oklch(0.373 0.034 259.733);
     --color-gray-800: oklch(0.278 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
@@ -205,6 +203,9 @@
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
+  .top-16 {
+    top: calc(var(--spacing) * 16);
+  }
   .-right-0 {
     right: calc(var(--spacing) * -0);
   }
@@ -222,6 +223,9 @@
   }
   .z-10 {
     z-index: 10;
+  }
+  .z-11 {
+    z-index: 11;
   }
   .z-20 {
     z-index: 20;
@@ -687,9 +691,6 @@
   .text-black\/60 {
     color: color-mix(in oklab, var(--color-black) 60%, transparent);
   }
-  .text-gray-500 {
-    color: var(--color-gray-500);
-  }
   .text-white {
     color: var(--color-white);
   }
@@ -715,20 +716,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-black);
-      }
-    }
-  }
-  .hover\:text-black\/60 {
-    &:hover {
-      @media (hover: hover) {
-        color: color-mix(in oklab, var(--color-black) 60%, transparent);
-      }
-    }
-  }
-  .hover\:text-gray-700 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-gray-700);
       }
     }
   }
@@ -830,6 +817,11 @@
   .md\:text-\[32px\] {
     @media (width >= 48rem) {
       font-size: 32px;
+    }
+  }
+  .lg\:top-0 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 0);
     }
   }
   .lg\:left-0 {

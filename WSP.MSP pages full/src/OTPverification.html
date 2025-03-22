@@ -8,15 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
-<body class="font-['DM_Sans'] background1 h-full">
+<body class="font-['DM_Sans'] bg-background1 min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col">
     <div id="menu-container" class="flex h-full flex-col lg:flex-row">
       <!-- Sidebar -->
       
 
       <!-- Main Content -->
-      <div class="flex flex-grow flex-col h-full gap-0 py-2">
-        <div class="h-full w-full pt-[15px] pr-[16px] md:pb-[24px] pb-[16px] pl-[16px] mt-4">
-          <h2 class="font-bold md:text-[32px] text-[24px] leading-[40px] tracking-[3%] font-sans text-center md:text-left">
+      <div class="flex flex-grow flex-col h-full gap-0 ">
+        <div class="h-full w-full pt-[16px] md:pt-[24px] pr-[16px] md:pb-[24px] pb-[16px] pl-[16px] lg:top-0 top-16 sticky z-11">
+          <h2 class="font-bold md:text-[32px] text-[24px] leading-[40px] tracking-[3%] font-sans text-center md:text-left ">
             OTP Confirmation
           </h2>
         </div>
@@ -28,7 +28,7 @@
                   Pending
                   <span class="bg-black text-white text-xs w-6 h-6 flex items-center justify-center rounded-full">1</span>
                 </h3>
-                <div class="w-[48px] h-[48px] border rounded-full flex items-center justify-center hidden md:flex" id="searchBtn">
+                <div class="w-[48px] h-[48px] border border-black/5 rounded-full flex items-center justify-center hidden md:flex cursor-pointer" id="searchBtn">
                   <img src="img/OTPverification/Vector13.png" alt="search" class="w-6 h-6">
                 </div>
               </div>
@@ -224,7 +224,7 @@
             </div>
           
             <!-- OTP Details (Fixed, No Scroll) -->
-            <div class="flex-grow w-full md:w-1/2 h-auto rounded-md gap-2 md:px-5 border-l border-gray-200 flex flex-col bg-white">
+            <div class="flex-grow w-full md:w-1/2 h-auto rounded-md gap-2 md:px-5 border-l  border-black/5 flex flex-col bg-white">
               <button class="self-start text-black font-['DM_Sans'] font-medium text-base leading-5 tracking-[-0.01em] underline mt-10 mb-5 pl-7 md:pl-0 cursor-pointer" id="closeBtn">Close</button>
               <div class="text-center space-y-8 mx-auto max-w-[50vh] flex flex-col pt-24 overflow-hidden" id="otpDetails">
                 <p class="hidden md:pt-76 pt-4" id="selectMessage">Select a rider to see info</p>
@@ -232,24 +232,24 @@
                   <div class="w-[120px] h-[120px] bg-gray-300 rounded-full mx-auto overflow-hidden">
                     <img src="img/OTPverification/7a53e28c8e0fb3041bea3c00aa660a58.png" alt="" class="w-full h-full object-cover">
                   </div>
-                  <h3 class="text-xl font-semibold">Nasser Alsubai</h3>
-                  <p class="text-gray-500">ID: 296571905</p>
+                  <h3 class="text-[22px] font-semibold">Nasser Alsubai</h3>
+                  <p class="text-black/60">ID: 296571905</p>
                 </div>
                 <div class="space-y-4 rider-content">
                   <div class="text-center">
                     <div class="w-4 h-4 mx-auto hidden" id="tickMark">
                       <img src="img/OTPverification/tick.png" alt="tick" class="w-full h-full object-contain">
                     </div>
-                    <h1 class="text-3xl font-bold color-semitransparent" id="otpNumber">674951</h1>
+                    <h1 class="text-[32px] font-bold text-[rgba(255,86,52,1)]" id="otpNumber">674951</h1>
                   </div>
-                  <p class="text-gray-600">
+                  <p class="text-black text-[16px]">
                     To accept cash transfers, the rider must enter this 4-digit code in their app before you can accept the transaction.
                   </p>
                 </div>
                 <div class="space-y-4 rider-content">
-                  <p class="text-lg font-medium">The amount you should receive:</p>
-                  <p class="text-2xl font-bold">$86.60</p>
-                  <button class="bg-gray-300 text-gray-500 px-6 py-2 rounded-full cursor-not-allowed" id="acceptBtn" disabled>Accept Cash Transfer</button>
+                  <p class="text-[16px]">The amount you should receive:</p>
+                  <p class="text-[32px] leading-10 font-bold mb-4">$86.60</p>
+                  <button class="bg-black/5 text-black/40 text-4 px-6 py-2 rounded-full cursor-not-allowed" id="acceptBtn" disabled>Accept Cash Transfer</button>
                 </div>
               </div>
             </div>
