@@ -159,7 +159,7 @@ body {
 .form-options {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 14px;
+    /* margin-bottom: 14px; */
     font-size: 16px;
     margin-top: 14px;
 }
