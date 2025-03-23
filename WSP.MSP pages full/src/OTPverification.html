@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
-<body class="font-['DM_Sans'] bg-background1 min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col">
+<body class="font-['DM_Sans'] background1 min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col">
     <div id="menu-container" class="flex h-full flex-col lg:flex-row">
       <!-- Sidebar -->
       
 
       <!-- Main Content -->
-      <div class="flex flex-grow flex-col h-full gap-0 ">
-        <div class="h-full w-full pt-[16px] md:pt-[24px] pr-[16px] md:pb-[24px] pb-[16px] pl-[16px] lg:top-0 top-16 sticky z-11">
+      <div class="flex flex-grow flex-col h-full gap-0 lg:ml-20 ">
+        <div id="mainHeader" class="h-full w-full pt-[16px] md:pt-[24px] pr-[16px] md:pb-[24px] pb-[16px] pl-[16px] lg:top-0 top-16 sticky z-11 bg-transparent transition-colors duration-300">
           <h2 class="font-bold md:text-[32px] text-[24px] leading-[40px] tracking-[3%] font-sans text-center md:text-left ">
             OTP Confirmation
           </h2>
@@ -34,9 +34,9 @@
               </div>
               <!-- Search Overlay (replaces headerSection when active) -->
               <div class="w-full md:w-[320px] h-12 gap-4 px-4 hidden" id="searchOverlay">
-                <div class="bg-white rounded-full shadow-lg p-2 flex items-center w-full h-full">
-                  <input type="text" placeholder="Search..." class="w-full p-2 rounded-full border-none focus:outline-none">
-                  <button class="ml-2 text-gray-500 hover:text-gray-700 text-2xl font-bold" id="searchCloseBtn">×</button>
+                <div class="bg-white text-black rounded-full shadow-lg p-2 flex items-center w-full h-full">
+                  <input type="text" placeholder="Search..." class="w-full p-2 text-black  rounded-full border-none focus:outline-none">
+                  <button class="ml-2 text-black/60 text-2xl font-bold cursor-pointer" id="searchCloseBtn">×</button>
                 </div>
               </div>
               <div class="w-full md:w-[320px] h-[calc(100%-3rem)] overflow-y-auto overflow-x-hidden border-r border-black/10" style="height: calc(100vh - 3rem);">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nasser Alsubai</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 - 10:24</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 - 10:24</p>
                     </div>
                   </div>
                   <p class="font-sans font-medium text-base leading-6 flex items-center gap-2 flex-shrink-0">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Flores, Juanita</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:04</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:04</p>
                     </div>
                   </div>
                 </div>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Miles, Esther</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:30</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 09:30</p>
                     </div>
                   </div>
                 </div>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Miles, Esther</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:26</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 09:26</p>
                     </div>
                   </div>
                 </div>
@@ -106,7 +106,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Black, Marvin</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 09:20</p>
                     </div>
                   </div>
                 </div>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Cooper, Kristin</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:18</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 09:18</p>
                     </div>
                   </div>
                 </div>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Flores, Juanita</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 09:07</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 09:07</p>
                     </div>
                   </div>
                 </div>
@@ -139,7 +139,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Black, Marvin</p>
-                      <p class="text-sm text-gray-500 truncate">8 Feb 2024 — 22:20</p>
+                      <p class="text-sm text-black/60 truncate">8 Feb 2024 — 22:20</p>
                     </div>
                   </div>
                 </div>
@@ -150,7 +150,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -161,7 +161,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -183,7 +183,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -194,7 +194,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -205,7 +205,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="font-medium truncate">Nguyen, Shane</p>
-                      <p class="text-sm text-gray-500 truncate">9 Feb 2024 — 10:20</p>
+                      <p class="text-sm text-black/60 truncate">9 Feb 2024 — 10:20</p>
                     </div>
                   </div>
                 </div>
@@ -225,11 +225,11 @@
           
             <!-- OTP Details (Fixed, No Scroll) -->
             <div class="flex-grow w-full md:w-1/2 h-auto rounded-md gap-2 md:px-5 border-l  border-black/5 flex flex-col bg-white">
-              <button class="self-start text-black font-['DM_Sans'] font-medium text-base leading-5 tracking-[-0.01em] underline mt-10 mb-5 pl-7 md:pl-0 cursor-pointer" id="closeBtn">Close</button>
-              <div class="text-center space-y-8 mx-auto max-w-[50vh] flex flex-col pt-24 overflow-hidden" id="otpDetails">
+              <button class="self-start text-black font-['DM_Sans'] font-medium text-[16px] leading-5 tracking-[-0.01em] underline mt-[30px] mb-5 pl-7 md:pl-0 cursor-pointer" id="closeBtn">Close</button>
+              <div class="text-center space-y-8 mx-auto max-w-full flex flex-col pt-24 overflow-hidden" id="otpDetails">
                 <p class="hidden md:pt-76 pt-4" id="selectMessage">Select a rider to see info</p>
-                <div class="space-y-2 rider-content">
-                  <div class="w-[120px] h-[120px] bg-gray-300 rounded-full mx-auto overflow-hidden">
+                <div class="space-y-0 rider-content">
+                  <div class="w-[120px] h-[120px] bg-black/5 rounded-full mx-auto overflow-hidden mb-2">
                     <img src="img/OTPverification/7a53e28c8e0fb3041bea3c00aa660a58.png" alt="" class="w-full h-full object-cover">
                   </div>
                   <h3 class="text-[22px] font-semibold">Nasser Alsubai</h3>
@@ -246,7 +246,7 @@
                     To accept cash transfers, the rider must enter this 4-digit code in their app before you can accept the transaction.
                   </p>
                 </div>
-                <div class="space-y-4 rider-content">
+                <div class="space-y-0 rider-content">
                   <p class="text-[16px]">The amount you should receive:</p>
                   <p class="text-[32px] leading-10 font-bold mb-4">$86.60</p>
                   <button class="bg-black/5 text-black/40 text-4 px-6 py-2 rounded-full cursor-not-allowed" id="acceptBtn" disabled>Accept Cash Transfer</button>
@@ -388,6 +388,22 @@
           }
       })
       .catch(error => console.log('Error loading menu:', error));
+</script>
+  <!-- Js for scrolling effect header -->
+  <script>
+    document.addEventListener('scroll', () => {
+        const element = document.getElementById('mainHeader');
+
+        if (window.scrollY > 0) {
+            // Remove transparent, add semi-transparent white
+            element.classList.remove('bg-transparent');
+            element.classList.add('bg-[rgba(255,255,255,1)]', 'rounded-[12px]');
+        } else {
+            // Remove semi-transparent white, add transparent
+            element.classList.remove('bg-[rgba(255,255,255,1)]', 'rounded-[12px]');
+            element.classList.add('bg-transparent');
+        }
+    });
 </script>
 
 </body>
