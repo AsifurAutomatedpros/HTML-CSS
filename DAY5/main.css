@@ -159,6 +159,7 @@ body {
     top: 23px;
     transform: translateY(-50%);
     color: #666;
+    cursor: pointer;
 }
 
 .form-options {
