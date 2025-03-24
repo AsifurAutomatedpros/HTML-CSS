@@ -49,5 +49,20 @@
             </tr>
         </table>
     </div>
+
+
+    <!-- js for password toggle  -->
+     <script>
+    const eyeIcon = document.querySelector('.eye-icon');
+const passwordInput = document.querySelector('.password-container input');
+
+eyeIcon.onmousedown = () => passwordInput.type = 'text';
+eyeIcon.onmouseup = () => passwordInput.type = 'password';
+eyeIcon.onmouseleave = () => passwordInput.type = 'password';
+
+// For touch devices
+eyeIcon.ontouchstart = () => passwordInput.type = 'text';
+eyeIcon.ontouchend = () => passwordInput.type = 'password';
+</script>
 </body>
 </html>
