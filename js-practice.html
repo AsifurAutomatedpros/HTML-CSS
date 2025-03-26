@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>State Manager</title>
+</head>
+<body>
+    <script>
+        function createStateManager(initialState) {
+            let state = { ...initialState };
+            let subscribers = [];
+            return {
+                getState: () => state,
+                setState: (newState) => {
+                    state = { ...state, ...newState };
+                    subscribers.forEach(callback => callback(state));
+                },
+                subscribe: (callback) => {
+                    subscribers.push(callback);
+                }
+            };
+        }
+
+        const userState = createStateManager({ name: "John", online: false });
+        userState.subscribe((state) => console.log("State changed:", state));
+        console.log("Initial State:", userState.getState());
+        userState.setState({ online: true });
+        userState.setState({ lastActive: "2023-05-01" });
+        console.log("Final State:", userState.getState());
+        
+    </script>
+</body>
+</html>
